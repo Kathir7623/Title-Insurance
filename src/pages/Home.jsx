@@ -101,7 +101,7 @@ const Home = () => {
           }}
         />
 
-        <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '20px', width: '100%' }}>
+        <div className="container hero-container" style={{ position: 'relative', zIndex: 2, width: '100%' }}>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -491,7 +491,21 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .hero-container {
+          padding-top: 20px;
+        }
+        @media (max-width: 768px) {
+          .hero {
+            height: auto !important;
+            padding: 140px 0 100px !important;
+            align-items: flex-start !important;
+          }
+          .hero-container {
+            padding-top: 0;
+          }
+        }
+      `}} />
     </div>
   );
 };

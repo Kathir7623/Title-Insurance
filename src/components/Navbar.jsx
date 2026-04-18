@@ -158,8 +158,13 @@ const Navbar = () => {
         @media (max-width: 768px) {
           .desktop-menu { display: none !important; }
           .mobile-toggle { display: block !important; }
-          .nav-container { height: 80px !important; }
-          .nav-logo { height: 60px !important; }
+          .nav-container { height: 75px !important; }
+          .nav-logo { height: 50px !important; }
+        }
+        
+        @media (max-width: 480px) {
+          .nav-container { height: 65px !important; }
+          .nav-logo { height: 40px !important; }
         }
       `}} />
     </>
