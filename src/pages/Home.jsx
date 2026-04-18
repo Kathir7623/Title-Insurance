@@ -94,7 +94,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             style={{ maxWidth: '650px' }}
           >
-            <span className="badge">Trusted Across the USA</span>
+            
             <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: 'white', marginBottom: '1.5rem', lineHeight: 1.1 }}>
               Protect Your Property. <br />
               <span style={{ color: 'var(--secondary)' }}>Secure Your Future.</span>
