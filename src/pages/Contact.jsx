@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, Shield, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const fadeIn = {
@@ -26,10 +27,18 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            style={{ color: '#94a3b8', fontSize: '1.25rem' }}
+            style={{ color: '#94a3b8', fontSize: '1.25rem', marginBottom: '1.5rem' }}
           >
-            Ready to secure your property? Reach out to our team today.
+            Ready to secure your property? Reach out to our title team today to discuss your next closing.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            style={{ fontSize: '1rem', color: 'var(--secondary)', fontWeight: 600 }}
+          >
+            New to title insurance? Visit our <Link to="/why-title-insurance" style={{ color: 'white', textDecoration: 'underline' }}>Why Title Insurance?</Link> page before you reach out.
+          </motion.div>
         </div>
       </section>
 
@@ -38,7 +47,11 @@ const Contact = () => {
           <div className="grid grid-cols-2" style={{ gap: '5rem' }}>
             {/* Contact Info */}
             <motion.div {...fadeIn}>
-              <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Get in Touch</h2>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Get in Touch</h2>
+              <p style={{ color: 'var(--muted)', fontSize: '1.1rem', marginBottom: '3rem' }}>
+                We typically respond to all inquiries within one business day. Our goal is to make your title experience as smooth and transparent as possible.
+              </p>
+              
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
                   <div style={{
@@ -75,7 +88,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Email</h4>
-                    <p style={{ color: 'var(--muted)' }}>support@kmtitleinsurance.com</p>
+                    <p style={{ color: 'var(--muted)', marginBottom: '0.25rem' }}>support@kmtitleinsurance.com</p>
+                    <p style={{ fontSize: '0.8rem', color: '#64748b' }}>For secure document sharing, we will provide specific instructions after initial contact.</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
@@ -94,7 +108,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Phone</h4>
-                    <p style={{ color: 'var(--muted)' }}>(470) 706-5858</p>
+                    <a href="tel:+14707065858" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '1.1rem', textDecoration: 'none' }}>
+                      (470) 706-5858
+                    </a>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
@@ -118,33 +134,42 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div style={{ marginTop: '4rem', padding: '2rem', background: '#F8FAFC', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                  <Shield className="text-secondary" />
-                  <h3 style={{ fontSize: '1.25rem' }}>Secure Transaction</h3>
+              <div style={{ marginTop: '4rem', padding: '2.5rem', background: '#F8FAFC', borderRadius: '2rem', border: '1px solid var(--border)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+                  <div style={{ background: 'white', padding: '0.5rem', borderRadius: '0.75rem', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
+                    <Shield className="text-secondary" />
+                  </div>
+                  <h3 style={{ fontSize: '1.4rem' }}>Secure Transaction Focus</h3>
                 </div>
-                <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>All information shared with us is encrypted and handled with the highest level of security and confidentiality.</p>
+                <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.6 }}>
+                  All information shared with us is encrypted and handled with the highest level of security and confidentiality in accordance with industry standards.
+                </p>
               </div>
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div {...fadeIn} style={{ background: 'white', padding: '3rem', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}>
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '2rem' }}>Request a Free Title Quote</h3>
-              <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <motion.div {...fadeIn} style={{ background: 'white', padding: '3.5rem', borderRadius: '2.5rem', boxShadow: 'var(--shadow-xl)', border: '1px solid var(--border)' }}>
+              <div style={{ marginBottom: '2.5rem' }}>
+                <h3 style={{ fontSize: '1.85rem', marginBottom: '0.75rem' }}>Request a Free Title Quote</h3>
+                <p style={{ color: 'var(--muted)' }}>Complete the form below to start your title search or request a quote.</p>
+              </div>
+              
+              <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Full Name</label>
-                    <input type="text" placeholder="John Doe" style={inputStyle} />
+                    <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Full Name <span style={{ color: 'var(--secondary)' }}>*</span></label>
+                    <input type="text" placeholder="John Doe" style={inputStyle} required />
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Email Address</label>
-                    <input type="email" placeholder="john@example.com" style={inputStyle} />
+                    <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Email Address <span style={{ color: 'var(--secondary)' }}>*</span></label>
+                    <input type="email" placeholder="john@example.com" style={inputStyle} required />
                   </div>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Who are you?</label>
-                    <select style={inputStyle}>
+                    <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Who are you? <span style={{ color: 'var(--secondary)' }}>*</span></label>
+                    <select style={inputStyle} required>
+                      <option value="">Select option</option>
                       <option>Home Buyer</option>
                       <option>Home Seller</option>
                       <option>Real Estate Agent</option>
@@ -153,8 +178,9 @@ const Contact = () => {
                     </select>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Service Needed</label>
-                    <select style={inputStyle}>
+                    <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Service Needed <span style={{ color: 'var(--secondary)' }}>*</span></label>
+                    <select style={inputStyle} required>
+                      <option value="">Select service</option>
                       <option>Owner's Title Insurance</option>
                       <option>Lender's Title Insurance</option>
                       <option>Title Search & Examination</option>
@@ -164,32 +190,54 @@ const Contact = () => {
                   </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Your Message</label>
-                  <textarea placeholder="How can we help you today?" style={{ ...inputStyle, height: '150px', resize: 'none' }}></textarea>
+                  <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Your Message <span style={{ color: 'var(--secondary)' }}>*</span></label>
+                  <textarea 
+                    placeholder="Share details about your property, closing date, and how we can help." 
+                    style={{ ...inputStyle, height: '140px', resize: 'none' }}
+                    required
+                  ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary" style={{ padding: '1rem' }}>
-                  Start Your Title Order <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
-                </button>
+                
+                <div style={{ textAlign: 'center' }}>
+                  <button type="submit" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', width: '100%', justifyContent: 'center', fontSize: '1.1rem' }}>
+                    Start Your Title Order <ArrowRight size={20} style={{ marginLeft: '1rem' }} />
+                  </button>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: '1.25rem' }}>
+                    By submitting, you agree that we may contact you regarding your transaction. We will never sell or share your information with third parties unrelated to your closing.
+                  </p>
+                </div>
               </form>
+              
+              <div style={{ marginTop: '2.5rem', padding: '1rem', background: 'rgba(237, 122, 28, 0.05)', borderRadius: '1rem', textAlign: 'center' }}>
+                <p style={{ fontSize: '0.85rem', color: 'var(--secondary)', fontWeight: 600 }}>
+                  We’ll review your information and follow up with an initial quote within 24 hours.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        input:focus, select:focus, textarea:focus {
+          border-color: var(--secondary) !important;
+          box-shadow: 0 0 0 4px rgba(237, 122, 28, 0.1);
+        }
+      `}} />
     </div>
   );
 };
 
 const inputStyle = {
-  padding: '0.75rem 1rem',
-  borderRadius: '8px',
+  padding: '1rem 1.25rem',
+  borderRadius: '12px',
   border: '1px solid var(--border)',
   fontSize: '1rem',
   fontFamily: 'var(--font-sans)',
   outline: 'none',
-  transition: 'border-color 0.2s ease',
-  '&:focus': {
-    borderColor: 'var(--secondary)'
-  }
+  transition: 'all 0.3s ease',
+  width: '100%',
+  backgroundColor: '#F8FAFC'
 };
 
 export default Contact;
