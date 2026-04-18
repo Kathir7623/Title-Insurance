@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Search, FileText, Landmark, CheckCircle, ArrowRight } from 'lucide-react';
+import { Shield, Lock, Search, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import closingImg from '../assets/closing.png';
+import ownersImg from '../assets/owners.png';
+import lendersImg from '../assets/lenders.png';
+import searchImg from '../assets/search.png';
+import settlementImg from '../assets/settlement.png';
 
 const Services = () => {
   const fadeIn = {
@@ -15,6 +18,7 @@ const Services = () => {
   const servicesDetailed = [
     {
       icon: <Shield size={40} className="text-secondary" />,
+      image: ownersImg,
       title: "Owner’s Title Insurance",
       cta: "Request an Owner’s Policy Quote",
       desc: "An Owner's Policy protects you, the property owner, from title defects that could arise after closing. For a one-time premium at closing, you receive long-term protection against covered title issues for as long as you own the property.",
@@ -27,9 +31,10 @@ const Services = () => {
     },
     {
       icon: <Lock size={40} className="text-secondary" />,
+      image: lendersImg,
       title: "Lender’s Title Insurance",
       cta: "Order Lender’s Title Coverage",
-      desc: "A Lender's Policy ensures the mortgage lender’s investment is protected and is typically required by mortgage lenders to protect their security interest in the property.",
+      desc: "A Lender's Policy ensures the mortgage lender’s investment is protected and is typically required by most mortgage lenders to protect their security interest in the property.",
       features: [
         "Protects lender priority and ensures a valid mortgage lien", 
         "Coverage tied to outstanding loan balance", 
@@ -39,6 +44,7 @@ const Services = () => {
     },
     {
       icon: <Search size={40} className="text-secondary" />,
+      image: searchImg,
       title: "Title Search & Examination",
       cta: "Order a Title Search",
       desc: "We carefully review public records, deeds, liens, and legal documents to identify issues that could affect ownership or delay your closing, typically before you sign a purchase contract.",
@@ -51,6 +57,7 @@ const Services = () => {
     },
     {
       icon: <FileText size={40} className="text-secondary" />,
+      image: settlementImg,
       title: "Title Settlement Services",
       cta: "Request Settlement Support",
       desc: "We coordinate the final steps of your transaction so closing day goes smoothly, managing documentation and funds with precision.",
@@ -97,7 +104,7 @@ const Services = () => {
       {/* Services List */}
       <section className="section-padding">
         <div className="container">
-          <div className="grid grid-cols-1" style={{ gap: '6rem' }}>
+          <div className="grid grid-cols-1" style={{ gap: '8rem' }}>
             {servicesDetailed.map((service, i) => (
               <motion.div
                 key={i}
@@ -132,29 +139,20 @@ const Services = () => {
                   <div style={{ 
                     width: '100%', 
                     height: '450px', 
-                    background: '#F1F5F9', 
                     borderRadius: '2rem', 
                     overflow: 'hidden',
                     boxShadow: 'var(--shadow-lg)'
                   }}>
-                    <div style={{ 
-                      width: '100%', 
-                      height: '100%', 
-                      background: 'linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%)',
-                      opacity: 0.05,
-                      position: 'absolute',
-                      inset: 0
-                    }} />
-                    <div style={{ 
-                      display: 'flex', 
-                      justifyContent: 'center', 
-                      alignItems: 'center', 
-                      height: '100%',
-                      position: 'relative',
-                      zIndex: 2
-                    }}>
-                      {React.cloneElement(service.icon, { size: 120, style: { opacity: 0.2 } })}
-                    </div>
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover',
+                        display: 'block'
+                      }} 
+                    />
                   </div>
                 </div>
               </motion.div>
