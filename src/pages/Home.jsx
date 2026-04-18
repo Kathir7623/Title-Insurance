@@ -168,21 +168,22 @@ const Home = () => {
                 right: '-2rem',
                 background: 'var(--secondary)',
                 color: 'white',
-                padding: '1.5rem 2rem',
+                padding: '2rem',
                 borderRadius: 'var(--radius)',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem'
+                gap: '1.5rem',
+                maxWidth: '280px'
               }} className="exp-box">
                 <div style={{ textAlign: 'center' }}>
-                  <span style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>15+</span>
-                  <p style={{ fontSize: '0.85rem' }}>Years Experience</p>
+                  <Shield size={32} style={{ marginBottom: '0.75rem', margin: '0 auto' }} />
+                  <p style={{ fontSize: '1.1rem', fontWeight: 800, lineHeight: 1.3 }}>Experienced Title Professionals</p>
                 </div>
                 <div style={{ height: '1px', background: 'rgba(255,255,255,0.2)' }} />
                 <div style={{ textAlign: 'center' }}>
-                  <span style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>10k+</span>
-                  <p style={{ fontSize: '0.85rem' }}>Closings Supported</p>
+                  <Award size={32} style={{ marginBottom: '0.75rem', margin: '0 auto' }} />
+                  <p style={{ fontSize: '1.1rem', fontWeight: 800, lineHeight: 1.3 }}>Industry-Standard Processes</p>
                 </div>
               </div>
             </motion.div>

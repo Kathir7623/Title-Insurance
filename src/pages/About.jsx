@@ -44,7 +44,7 @@ const About = () => {
                 KM Title Insurance is a US-based title company supporting buyers, homeowners, lenders, and real estate professionals with clear, accurate title work for smooth, on-time closings. Based in Raleigh, North Carolina, we provide title insurance services across NC and support clients with nationwide real estate transactions.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-                Buying a home or investing in property is one of the biggest decisions you will make. Our job is to remove title surprises so your closing stays on track. Since our founding, we've supported over 10,000 residential and investment property transactions, helping our clients close with confidence.
+                Buying a home or investing in property is one of the biggest decisions you will make. Our job is to remove title surprises so your closing stays on track. Our experienced team supports residential and investment property transactions of all sizes, helping our clients close with confidence.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 We combine thorough research with clear communication, so you, your agent, and your lender always know exactly where things stand. Learn more about our specialized support and nationwide capability on our <Link to="/services" style={{ color: 'var(--secondary)', fontWeight: 600 }}>Services</Link> page.
