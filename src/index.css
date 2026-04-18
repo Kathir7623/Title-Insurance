@@ -81,25 +81,25 @@ button {
 }
 
 .glass-nav {
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-nav.scrolled {
   background: var(--secondary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: none;
   box-shadow: var(--shadow-lg);
 }
 
-.glass-nav.scrolled .nav-logo {
+.nav-logo {
   filter: brightness(0) invert(1);
 }
 

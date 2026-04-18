@@ -46,7 +46,7 @@ const Navbar = () => {
                 style={{ 
                   fontWeight: 600, 
                   fontSize: '0.95rem',
-                  color: location.pathname === link.path ? 'var(--secondary)' : 'var(--muted)',
+                  color: location.pathname === link.path ? 'var(--secondary)' : 'white',
                   position: 'relative'
                 }}
                 className="nav-link"
@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: scrolled ? 'white' : 'var(--primary)', padding: '0.5rem', border: 'none', background: 'none' }}>
+          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: 'white', padding: '0.5rem', border: 'none', background: 'none' }}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
