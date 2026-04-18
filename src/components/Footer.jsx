@@ -66,12 +66,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid #1e293b', paddingTop: '2.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
-          <div style={{ maxWidth: '600px' }}>
-            <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1rem' }}>
-              © {new Date().getFullYear()} KM Title Insurance. All rights reserved.
-            </p>
-            <p style={{ fontSize: '0.75rem', color: '#475569', lineHeight: 1.5 }}>
+        <div style={{ borderTop: '1px solid #1e293b', paddingTop: '2rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1.5rem' }}>
+            © {new Date().getFullYear()} KM Title Insurance. All rights reserved.
+          </p>
+          <div style={{ padding: '1.25rem 0', borderTop: '1px solid #1e293b' }}>
+            <p style={{ fontSize: '0.75rem', color: '#475569', lineHeight: 1.5, letterSpacing: '0.02em', textTransform: 'uppercase', opacity: 0.8 }}>
               Disclaimer: This is not a commitment to insure. All services and policies are subject to underwriting approval and state-specific regulations. Information on this website is for educational purposes and does not constitute legal advice.
             </p>
           </div>
