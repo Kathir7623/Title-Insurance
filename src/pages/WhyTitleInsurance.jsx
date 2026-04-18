@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Shield, CheckCircle, AlertTriangle, FileText, Search, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import investmentImg from '../assets/investment.png';
+
 const WhyTitleInsurance = () => {
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -63,7 +65,10 @@ const WhyTitleInsurance = () => {
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 Title insurance is unique. Unlike other policies that protect you from future events (like fire or theft), title insurance protects you from <strong>past events</strong> that could threaten your ownership rights today.
               </p>
-              <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2rem', fontStyle: 'italic' }}>
+              <p style={{ fontSize: '1.1rem', color: 'var(--primary)', fontWeight: 600, borderLeft: '4px solid var(--secondary)', paddingLeft: '1.5rem', marginBottom: '2rem' }}>
+                "Title insurance protects you from problems in the property’s past that could affect your ownership today."
+              </p>
+              <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2.5rem', fontStyle: 'italic' }}>
                 For example, an old unpaid tax bill, a forged signature, or an undiscovered heir could suddenly threaten your right to keep the home.
               </p>
               <div>
@@ -72,11 +77,44 @@ const WhyTitleInsurance = () => {
               </div>
             </motion.div>
             <motion.div {...fadeIn}>
-              <div style={{ padding: '3rem', background: 'rgba(237, 122, 28, 0.05)', borderRadius: 'var(--radius)', border: '1px dashed var(--secondary)' }}>
+              <div style={{ 
+                padding: '4rem', 
+                borderRadius: '2rem', 
+                position: 'relative', 
+                overflow: 'hidden',
+                minHeight: '400px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                color: 'white',
+                boxShadow: 'var(--shadow-xl)'
+              }}>
+                <img 
+                  src={investmentImg} 
+                  alt="One-time investment" 
+                  style={{ 
+                    position: 'absolute', 
+                    inset: 0, 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    zIndex: -1
+                  }} 
+                />
+                <div style={{ 
+                  position: 'absolute', 
+                  inset: 0, 
+                  background: 'linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%)',
+                  zIndex: -1
+                }} />
+                
                 <Shield size={64} style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }} />
-                <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>A One-Time Investment</h3>
-                <p style={{ color: 'var(--muted)', lineHeight: 1.6 }}>
+                <h3 style={{ fontSize: '2.25rem', marginBottom: '1.25rem', fontWeight: 700 }}>A One-Time Investment</h3>
+                <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '90%' }}>
                   You pay for owner’s title insurance once at closing, and coverage lasts as long as you or your heirs own the property. Unlike most insurance, there are no monthly premiums.
+                </p>
+                <p style={{ fontWeight: 700, color: 'white', display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.1rem' }}>
+                  <CheckCircle size={24} className="text-secondary" /> Lifetime Protection
                 </p>
               </div>
             </motion.div>
