@@ -56,7 +56,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Location</h4>
-                    <p style={{ color: 'var(--muted)' }}>United States (Nationwide Coverage)</p>
+                    <p style={{ color: 'var(--muted)' }}>1428 Bailey's Run Ct, Raleigh, NC 27606</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem' }}>

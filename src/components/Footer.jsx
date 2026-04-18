@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: 'var(--primary)', color: 'white', padding: '2rem 0 2rem' }}>
+    <footer style={{ background: '#0f172a', color: 'white', padding: '5rem 0 2rem', borderTop: '4px solid var(--secondary)' }}>
       <div className="container">
         <div className="grid grid-cols-4" style={{ marginBottom: '4rem' }}>
           <div>
@@ -25,6 +25,7 @@ const Footer = () => {
               <li><Link to="/" style={{ color: '#94a3b8' }}>Home</Link></li>
               <li><Link to="/about" style={{ color: '#94a3b8' }}>About Us</Link></li>
               <li><Link to="/services" style={{ color: '#94a3b8' }}>Our Services</Link></li>
+              <li><Link to="/why-title-insurance" style={{ color: '#94a3b8' }}>Why Title Insurance?</Link></li>
               <li><Link to="/contact" style={{ color: '#94a3b8' }}>Contact</Link></li>
               <li><Link to="/privacy" style={{ color: '#94a3b8' }}>Privacy Policy</Link></li>
             </ul>
@@ -43,7 +44,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <MapPin size={20} style={{ color: 'var(--secondary)' }} />
-                <span>United States</span>
+                <span>1428 Bailey's Run Ct, Raleigh, NC 27606</span>
               </li>
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <Mail size={20} style={{ color: 'var(--secondary)' }} />

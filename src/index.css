@@ -90,6 +90,30 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.glass-nav.scrolled {
+  background: var(--secondary);
+  border-bottom: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.glass-nav.scrolled .nav-logo {
+  filter: brightness(0) invert(1);
+}
+
+.glass-nav.scrolled .nav-link {
+  color: white !important;
+}
+
+.glass-nav.scrolled .btn-primary {
+  background: white;
+  color: var(--secondary);
+}
+
+.glass-nav.scrolled .btn-primary:hover {
+  background: #f8fafc;
 }
 
 .btn {
