@@ -65,15 +65,12 @@ const WhyTitleInsurance = () => {
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 Title insurance is unique. Unlike other policies that protect you from future events (like fire or theft), title insurance protects you from <strong>past events</strong> that could threaten your ownership rights today.
               </p>
-              <p style={{ fontSize: '1.1rem', color: 'var(--primary)', fontWeight: 600, borderLeft: '4px solid var(--secondary)', paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-                "Title insurance protects you from problems in the property’s past that could affect your ownership today."
-              </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2.5rem', fontStyle: 'italic' }}>
                 For example, an old unpaid tax bill, a forged signature, or an undiscovered heir could suddenly threaten your right to keep the home.
               </p>
               <div>
                 <Link to="/contact" className="btn btn-primary" style={{ marginBottom: '1rem' }}>Protect Your Home Now</Link>
-                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginLeft: '0.5rem' }}>Request a free title quote or ask us to review your upcoming closing.</p>
+                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginLeft: '0.5rem' }}>Request a free title quote or ask us to review your upcoming closing in North Carolina or nationwide.</p>
               </div>
             </motion.div>
             <motion.div {...fadeIn}>
@@ -111,7 +108,7 @@ const WhyTitleInsurance = () => {
                 <Shield size={64} style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }} />
                 <h3 style={{ fontSize: '2.25rem', marginBottom: '1.25rem', fontWeight: 700 }}>A One-Time Investment</h3>
                 <p style={{ color: '#cbd5e1', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '90%' }}>
-                  You pay for owner’s title insurance once at closing, and coverage lasts as long as you or your heirs own the property. Unlike most insurance, there are no monthly premiums.
+                  For a single premium paid at closing, you receive ongoing protection against covered title issues for as long as you own the property. Unlike most insurance, there are no monthly premiums.
                 </p>
                 <p style={{ fontWeight: 700, color: 'white', display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.1rem' }}>
                   <CheckCircle size={24} className="text-secondary" /> Lifetime Protection
@@ -132,19 +129,21 @@ const WhyTitleInsurance = () => {
               Even with a thorough title search, some issues are "off-record" and may only surface after you become the owner.
             </p>
           </div>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3" style={{ gap: '2rem' }}>
             {risks.map((risk, i) => (
               <motion.div 
                 key={i} 
                 {...fadeIn} 
-                transition={{ delay: i * 0.1 }}
                 className="card"
+                style={{ background: 'white', padding: '2.5rem', borderRadius: '1.5rem' }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                  <AlertTriangle size={20} style={{ color: 'var(--secondary)' }} />
-                  <h3 style={{ fontSize: '1.2rem' }}>{risk.title}</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                  <div style={{ background: 'rgba(237, 122, 28, 0.1)', padding: '0.75rem', borderRadius: '1rem' }}>
+                    <AlertTriangle size={24} style={{ color: 'var(--secondary)' }} />
+                  </div>
+                  <h3 style={{ fontSize: '1.35rem' }}>{risk.title}</h3>
                 </div>
-                <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{risk.desc}</p>
+                <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.6 }}>{risk.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -173,32 +172,33 @@ const WhyTitleInsurance = () => {
                 </p>
               </div>
               
-              <div style={{ overflowX: 'auto', background: 'white', borderRadius: '1.5rem', boxShadow: 'var(--shadow-md)', marginBottom: '3rem' }}>
+              <div style={{ overflowX: 'auto', background: 'white', borderRadius: '1.5rem', boxShadow: 'var(--shadow-lg)', marginBottom: '3rem' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
                   <thead>
                     <tr style={{ background: 'var(--primary)', color: 'white' }}>
-                      <th style={{ padding: '1rem' }}>Aspect</th>
-                      <th style={{ padding: '1rem' }}>Owner's Policy</th>
-                      <th style={{ padding: '1rem' }}>Lender's Policy</th>
+                      <th style={{ padding: '1.25rem' }}>Aspect</th>
+                      <th style={{ padding: '1.25rem' }}>Owner's Policy</th>
+                      <th style={{ padding: '1.25rem' }}>Lender's Policy</th>
                     </tr>
                   </thead>
                   <tbody>
                     {[
                       { aspect: "Who is protected", owner: "You and your heirs", lender: "The mortgage lender" },
                       { aspect: "Coverage amount", owner: "Full purchase price", lender: "Outstanding loan balance" },
-                      { aspect: "Duration", owner: "As long as you own home", lender: "Until loan is paid off" },
-                      { aspect: "Required?", owner: "Optional (Recommended)", lender: "Typically Required" }
+                      { aspect: "Duration", owner: "As long as you own the home", lender: "Until loan is paid off" },
+                      { aspect: "Required?", owner: "Optional but strongly recommended", lender: "Typically required by lenders" }
                     ].map((row, idx) => (
                       <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0' }}>
-                        <td style={{ padding: '0.75rem', fontWeight: 700, fontSize: '0.85rem', background: '#F8FAFC' }}>{row.aspect}</td>
-                        <td style={{ padding: '0.75rem', fontSize: '0.85rem' }}>{row.owner}</td>
-                        <td style={{ padding: '0.75rem', fontSize: '0.85rem' }}>{row.lender}</td>
+                        <td style={{ padding: '1rem', fontWeight: 700, fontSize: '0.9rem', background: '#F8FAFC' }}>{row.aspect}</td>
+                        <td style={{ padding: '1rem', fontSize: '0.9rem' }}>{row.owner}</td>
+                        <td style={{ padding: '1rem', fontSize: '0.9rem' }}>{row.lender}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
 
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>An Owner’s Policy typically includes:</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {[
                   "Protection against legal fees and court costs",
@@ -226,7 +226,7 @@ const WhyTitleInsurance = () => {
               Whether you are a homebuyer, investor, agent, or lender, contact KM Title today to discuss your next closing and ensure absolute protection.
             </p>
             <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.2rem' }}>
-              Get Protected Today
+              Request a Free Title Quote
             </Link>
           </motion.div>
         </div>
