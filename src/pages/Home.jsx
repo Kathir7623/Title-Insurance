@@ -495,14 +495,34 @@ const Home = () => {
         .hero-container {
           padding-top: 20px;
         }
+        @media (max-width: 1024px) {
+          .home-page .section-padding { padding: 4rem 0 !important; }
+        }
         @media (max-width: 768px) {
           .hero {
             height: auto !important;
             padding: 140px 0 100px !important;
             align-items: flex-start !important;
           }
+          .hero h1 { font-size: 2.5rem !important; }
           .hero-container {
             padding-top: 0;
+          }
+          .exp-box {
+            position: relative !important;
+            inset: auto !important;
+            margin-top: 2rem !important;
+            max-width: 100% !important;
+            bottom: auto !important;
+            right: auto !important;
+          }
+          .home-page h3 { font-size: 1.75rem !important; }
+          .home-page h2 { font-size: 2rem !important; }
+          .home-page .grid { gap: 1.5rem !important; }
+          
+          /* Force grid stacks */
+          .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+            grid-template-columns: 1fr !important;
           }
         }
       `}} />

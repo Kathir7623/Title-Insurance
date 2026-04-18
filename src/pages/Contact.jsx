@@ -219,6 +219,23 @@ const Contact = () => {
       </section>
 
       <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 991px) {
+          .contact-page .grid-cols-2 { 
+            grid-template-columns: 1fr !important;
+            gap: 4rem !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .contact-page h1 { font-size: 2.5rem !important; }
+          .contact-page .section-padding { padding: 4rem 0 !important; }
+          .contact-page form > div {
+            grid-template-columns: 1fr !important;
+            gap: 1.75rem !important;
+          }
+          .contact-page .motion-div {
+            padding: 2rem !important;
+          }
+        }
         input:focus, select:focus, textarea:focus {
           border-color: var(--secondary) !important;
           box-shadow: 0 0 0 4px rgba(237, 122, 28, 0.1);

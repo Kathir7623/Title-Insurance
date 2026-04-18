@@ -227,7 +227,17 @@ const Services = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         @media (max-width: 991px) {
-          .service-row { flex-direction: column !important; gap: 2rem !important; }
+          .service-row { flex-direction: column !important; gap: 3rem !important; }
+          .service-row > div { width: 100% !important; }
+          .service-row img { height: 350px !important; }
+        }
+        @media (max-width: 768px) {
+          .services-page h1 { font-size: 2.5rem !important; }
+          .services-page h2 { font-size: 2rem !important; }
+          .services-page .section-padding { padding: 4rem 0 !important; }
+          .services-page ul { grid-template-columns: 1fr !important; gap: 1rem !important; }
+          .service-row { gap: 2rem !important; }
+          .service-row img { height: 280px !important; }
         }
       `}} />
     </div>

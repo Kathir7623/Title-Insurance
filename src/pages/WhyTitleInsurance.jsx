@@ -231,6 +231,18 @@ const WhyTitleInsurance = () => {
           </motion.div>
         </div>
       </section>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 991px) {
+          .why-insurance-page .grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .why-insurance-page .grid[grid-cols-2] { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 768px) {
+          .why-insurance-page h1 { font-size: 2.5rem !important; }
+          .why-insurance-page h2 { font-size: 2rem !important; }
+          .why-insurance-page .section-padding { padding: 4rem 0 !important; }
+          .why-insurance-page .motion-div > div { min-height: 300px !important; padding: 2.5rem !important; }
+        }
+      `}} />
     </div>
   );
 };

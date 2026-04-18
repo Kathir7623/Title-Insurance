@@ -182,6 +182,25 @@ const About = () => {
           </div>
         </div>
       </section>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 1024px) {
+          .about-page .grid {
+            grid-template-columns: 1fr !important;
+            gap: 3rem !important;
+          }
+          .about-page .grid div:nth-child(2) {
+            order: -1;
+          }
+          .about-page .grid[grid-cols-3] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .about-page h1 { font-size: 2.5rem !important; }
+          .about-page h2 { font-size: 2rem !important; }
+          .about-page .section-padding { padding: 4rem 0 !important; }
+        }
+      `}} />
     </div>
   );
 };
