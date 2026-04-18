@@ -16,15 +16,51 @@ const Services = () => {
     {
       icon: <Shield size={40} className="text-secondary" />,
       title: "Owner’s Title Insurance",
-      desc: "Protects homeowners from title defects and legal claims. This policy is issued in the amount of the real estate purchase price and remains in effect as long as you or your heirs own the property.",
-      features: ["Protects against fraud/forgery", "Ownership dispute coverage", "Covers unknown liens", "Professional legal defense"]
+      cta: "Request an Owner’s Policy Quote",
+      desc: "An Owner's Policy protects you, the property owner, from various title defects that could arise after closing. This policy is issued for the full purchase price and remains in effect as long as you or your heirs own the property.",
+      features: [
+        "Protects against fraud and forgery", 
+        "Covers ownership disputes", 
+        "Covers unknown liens and judgments", 
+        "Includes professional legal defense"
+      ]
     },
     {
       icon: <Lock size={40} className="text-secondary" />,
       title: "Lender’s Title Insurance",
-      desc: "Ensures the lender’s investment is protected during mortgage transactions. Most lenders require this insurance to protect their security interest in the property.",
-      features: ["Protects lender priority", "Ensures valid mortgage lien", "Coverage decreases as loan is paid", "Required by most lenders"]
+      cta: "Order Lender’s Title Coverage",
+      desc: "A Lender's Policy ensures the mortgage lender’s investment is protected. Typically required by most mortgage lenders to protect their security interest in the property.",
+      features: [
+        "Protects lender priority", 
+        "Ensures valid mortgage lien", 
+        "Coverage matching loan balance", 
+        "Typically required by lenders"
+      ]
     },
+    {
+      icon: <Search size={40} className="text-secondary" />,
+      title: "Title Search & Examination",
+      cta: "Order a Title Search",
+      desc: "We carefully review public records, deeds, liens, and legal documents to identify issues that could affect ownership or delay your closing.",
+      features: [
+        "Identifies existing liens & judgments", 
+        "Confirms correct chain of title", 
+        "Flags easements & restrictions", 
+        "Prevents surprises before closing"
+      ]
+    },
+    {
+      icon: <FileText size={40} className="text-secondary" />,
+      title: "Title Settlement Services",
+      cta: "Request Settlement Support",
+      desc: "We coordinate the final steps of your transaction so closing day goes smoothly, managing documentation and funds with absolute precision.",
+      features: [
+        "Prepares final title documents", 
+        "Coordinates with all deal parties", 
+        "Manages county document recording", 
+        "Ensures proper fund disbursement"
+      ]
+    }
   ];
 
   return (
@@ -53,7 +89,7 @@ const Services = () => {
       {/* Services List */}
       <section className="section-padding">
         <div className="container">
-          <div className="grid grid-cols-1" style={{ gap: '4rem' }}>
+          <div className="grid grid-cols-1" style={{ gap: '6rem' }}>
             {servicesDetailed.map((service, i) => (
               <motion.div
                 key={i}
@@ -61,37 +97,55 @@ const Services = () => {
                 style={{
                   display: 'flex',
                   flexDirection: i % 2 === 0 ? 'row' : 'row-reverse',
-                  gap: '4rem',
-                  alignItems: 'center',
-                  background: 'white',
-                  borderRadius: 'var(--radius)',
-                  overflow: 'hidden'
+                  gap: '5rem',
+                  alignItems: 'center'
                 }}
                 className="service-row"
               >
                 <div style={{ flex: 1 }}>
                   <div style={{ marginBottom: '1.5rem' }}>{service.icon}</div>
-                  <h2 style={{ fontSize: '2.25rem', marginBottom: '1.5rem' }}>{service.title}</h2>
-                  <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2rem' }}>{service.desc}</p>
-                  <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{service.title}</h2>
+                  <p style={{ fontSize: '1.15rem', color: 'var(--muted)', marginBottom: '2.5rem', lineHeight: 1.7 }}>{service.desc}</p>
+                  <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
                     {service.features.map((feature, idx) => (
-                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.95rem', fontWeight: 500 }}>
-                        <CheckCircle size={18} style={{ color: 'var(--secondary)' }} />
+                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1rem', fontWeight: 500, color: 'var(--primary-light)' }}>
+                        <CheckCircle size={20} style={{ color: 'var(--secondary)' }} />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <div style={{ marginTop: '2.5rem' }}>
-                    <Link to="/contact" className="btn btn-primary">
-                      Get Started Today <ArrowRight size={18} />
+                  <div style={{ marginTop: '3rem' }}>
+                    <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
+                      {service.cta} <ArrowRight size={18} />
                     </Link>
                   </div>
                 </div>
-                <div style={{ flex: 1, background: '#F8FAFC', padding: '4rem', borderRadius: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <div style={{ width: '100%', height: '300px', background: 'white', borderRadius: '1rem', boxShadow: 'var(--shadow-md)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', textAlign: 'center' }}>
-                    <div>
-                      {React.cloneElement(service.icon, { size: 80, style: { opacity: 0.1, marginBottom: '1rem' } })}
-                      <p style={{ fontWeight: 700, fontSize: '1.5rem', opacity: 0.5 }}>{service.title}</p>
+                <div style={{ flex: 1, position: 'relative' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '450px', 
+                    background: '#F1F5F9', 
+                    borderRadius: '2rem', 
+                    overflow: 'hidden',
+                    boxShadow: 'var(--shadow-lg)'
+                  }}>
+                    <div style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      background: 'linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%)',
+                      opacity: 0.05,
+                      position: 'absolute',
+                      inset: 0
+                    }} />
+                    <div style={{ 
+                      display: 'flex', 
+                      justifyContent: 'center', 
+                      alignItems: 'center', 
+                      height: '100%',
+                      position: 'relative',
+                      zIndex: 2
+                    }}>
+                      {React.cloneElement(service.icon, { size: 120, style: { opacity: 0.2 } })}
                     </div>
                   </div>
                 </div>
@@ -101,13 +155,59 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA section inherited from Home for consistency */}
-      <section className="section-padding" style={{ background: '#F8FAFC', textAlign: 'center' }}>
+      {/* Comparison Table Section */}
+      <section className="section-padding" style={{ background: '#F8FAFC' }}>
+        <div className="container" style={{ maxWidth: '1000px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>Owner vs. Lender Title Insurance</h2>
+            <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Understanding the key differences in coverage and protection.</p>
+          </div>
+          
+          <div style={{ overflowX: 'auto', background: 'white', borderRadius: '1.5rem', boxShadow: 'var(--shadow-lg)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+              <thead>
+                <tr style={{ background: 'var(--primary)', color: 'white' }}>
+                  <th style={{ padding: '1.5rem' }}>Aspect</th>
+                  <th style={{ padding: '1.5rem' }}>Owner’s Title Insurance</th>
+                  <th style={{ padding: '1.5rem' }}>Lender’s Title Insurance</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { aspect: "Who is protected", owner: "The homeowner and their heirs", lender: "The mortgage lender" },
+                  { aspect: "Coverage amount", owner: "Purchase price of the property", lender: "Outstanding loan balance" },
+                  { aspect: "Duration", owner: "As long as you or your heirs own the property", lender: "Until the loan is paid off or refinanced" },
+                  { aspect: "Typical requirement", owner: "Optional but strongly recommended", lender: "Typically required by lenders" },
+                  { aspect: "Main purpose", owner: "Protects your ownership and equity", lender: "Protects lender’s security interest" }
+                ].map((row, idx) => (
+                  <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0' }}>
+                    <td style={{ padding: '1.25rem', fontWeight: 700, background: '#F8FAFC', width: '200px' }}>{row.aspect}</td>
+                    <td style={{ padding: '1.25rem', fontSize: '0.95rem' }}>{row.owner}</td>
+                    <td style={{ padding: '1.25rem', fontSize: '0.95rem' }}>{row.lender}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Still Have Questions? */}
+      <section className="section-padding" style={{ textAlign: 'center' }}>
         <div className="container">
           <motion.div {...fadeIn}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Still Have Questions?</h2>
-            <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2rem' }}>Our specialists are ready to help you navigate through the complexities of title insurance.</p>
-            <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 3rem' }}>Call Us: (470) 706-5858</Link>
+            <h2 style={{ fontSize: '2.75rem', marginBottom: '1.5rem' }}>Still Have Questions?</h2>
+            <p style={{ fontSize: '1.25rem', color: 'var(--muted)', marginBottom: '2.5rem', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
+              Not sure which type of title coverage you need? Our specialists can walk you through your options and provide a clear quote.
+            </p>
+            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="tel:+14707065858" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
+                Call Us: (470) 706-5858
+              </a>
+              <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
+                Contact us Online
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

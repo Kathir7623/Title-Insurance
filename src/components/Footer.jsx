@@ -15,7 +15,7 @@ const Footer = () => {
               Trusted US-based Title Insurance company dedicated to protecting homeowners, buyers, and lenders from potential title risks.
             </p>
             <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: 600 }}>
-              Serving Raleigh, NC and clients across the United States.
+              Serving Raleigh, NC and clients nationwide.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="#" style={{ color: '#94a3b8' }}><Share2 size={20} /></a>
