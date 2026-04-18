@@ -14,12 +14,9 @@ const Footer = () => {
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
               Trusted US-based Title Insurance company dedicated to protecting homeowners, buyers, and lenders from potential title risks.
             </p>
-            <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: 600 }}>
+            <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: 600 }}>
               Serving Raleigh, NC and clients nationwide.
             </p>
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href="#" style={{ color: '#94a3b8' }}><Share2 size={20} /></a>
-            </div>
           </div>
 
           <div>
@@ -66,11 +63,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid #1e293b', paddingTop: '2rem', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1.5rem' }}>
+        <div style={{ borderTop: '1px solid #1e293b', paddingTop: '1.5rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1rem' }}>
             © {new Date().getFullYear()} KM Title Insurance. All rights reserved.
           </p>
-          <div style={{ padding: '1.25rem 0', borderTop: '1px solid #1e293b' }}>
+          <div style={{ padding: '1rem 0', borderTop: '1px solid #1e293b' }}>
             <p style={{ fontSize: '0.75rem', color: '#475569', lineHeight: 1.5, letterSpacing: '0.02em', textTransform: 'uppercase', opacity: 0.8 }}>
               Disclaimer: This is not a commitment to insure. All services and policies are subject to underwriting approval and state-specific regulations. Information on this website is for educational purposes and does not constitute legal advice.
             </p>
