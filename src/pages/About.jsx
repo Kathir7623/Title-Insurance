@@ -36,7 +36,7 @@ const About = () => {
 
       {/* Hero-like Section */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1440px' }}>
           <div className="grid" style={{ gridTemplateColumns: '1fr 40%', alignItems: 'center', gap: '5rem' }}>
             <motion.div {...fadeIn}>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Protecting Your Investment</h2>
@@ -51,7 +51,7 @@ const About = () => {
               </p>
             </motion.div>
             <motion.div {...fadeIn}>
-              <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', maxHeight: '450px' }}>
+              <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', height: '400px' }}>
                 <img src={aboutImg} alt="Our Team" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </motion.div>
@@ -61,14 +61,14 @@ const About = () => {
 
       {/* Our Team Section */}
       <section className="section-padding" style={{ borderTop: '1px solid var(--border)' }}>
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1440px' }}>
           <div className="grid" style={{ gridTemplateColumns: '45% 1fr', alignItems: 'center', gap: '5rem' }}>
             <motion.div {...fadeIn}>
-              <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-xl)', maxHeight: '550px' }}>
+              <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-xl)', height: '400px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
                   alt="Title Experts" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                 />
               </div>
             </motion.div>
