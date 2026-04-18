@@ -491,6 +491,7 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section>
       <style dangerouslySetInnerHTML={{ __html: `
         .hero-container {
           padding-top: 20px;
