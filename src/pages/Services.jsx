@@ -17,23 +17,23 @@ const Services = () => {
       icon: <Shield size={40} className="text-secondary" />,
       title: "Owner’s Title Insurance",
       cta: "Request an Owner’s Policy Quote",
-      desc: "An Owner's Policy protects you, the property owner, from various title defects that could arise after closing. This policy is issued for the full purchase price and remains in effect as long as you or your heirs own the property.",
+      desc: "An Owner's Policy protects you, the property owner, from title defects that could arise after closing. It is issued for the full purchase price and stays in effect as long as you or your heirs own the property.",
       features: [
         "Protects against fraud and forgery", 
         "Covers ownership disputes", 
         "Covers unknown liens and judgments", 
-        "Includes professional legal defense"
+        "Includes professional legal defense for covered claims"
       ]
     },
     {
       icon: <Lock size={40} className="text-secondary" />,
       title: "Lender’s Title Insurance",
       cta: "Order Lender’s Title Coverage",
-      desc: "A Lender's Policy ensures the mortgage lender’s investment is protected. Typically required by most mortgage lenders to protect their security interest in the property.",
+      desc: "A Lender's Policy ensures the mortgage lender’s investment is protected and is typically required by mortgage lenders to protect their security interest in the property.",
       features: [
         "Protects lender priority", 
         "Ensures valid mortgage lien", 
-        "Coverage matching loan balance", 
+        "Coverage tied to outstanding loan balance", 
         "Typically required by lenders"
       ]
     },
@@ -41,12 +41,12 @@ const Services = () => {
       icon: <Search size={40} className="text-secondary" />,
       title: "Title Search & Examination",
       cta: "Order a Title Search",
-      desc: "We carefully review public records, deeds, liens, and legal documents to identify issues that could affect ownership or delay your closing.",
+      desc: "We carefully review public records, deeds, liens, and legal documents to identify issues that could affect ownership or delay your closing, typically before you sign a purchase contract.",
       features: [
-        "Identifies existing liens & judgments", 
-        "Confirms correct chain of title", 
-        "Flags easements & restrictions", 
-        "Prevents surprises before closing"
+        "Identify existing liens & judgments", 
+        "Confirm correct chain of title", 
+        "Flag easements & restrictions", 
+        "Prevent surprises before closing"
       ]
     },
     {
@@ -55,10 +55,10 @@ const Services = () => {
       cta: "Request Settlement Support",
       desc: "We coordinate the final steps of your transaction so closing day goes smoothly, managing documentation and funds with absolute precision.",
       features: [
-        "Prepares final title documents", 
-        "Coordinates with all deal parties", 
-        "Manages county document recording", 
-        "Ensures proper fund disbursement"
+        "Prepare final title documents", 
+        "Coordinate with all deal parties", 
+        "Manage county document recording", 
+        "Ensure proper fund disbursement"
       ]
     }
   ];
@@ -79,9 +79,17 @@ const Services = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            style={{ color: '#94a3b8', fontSize: '1.25rem' }}
+            style={{ color: '#94a3b8', fontSize: '1.25rem', marginBottom: '1.5rem' }}
           >
-            Comprehensive Protection for Your Real Estate Investments
+            Comprehensive title and escrow protection for your real estate transactions in North Carolina and nationwide.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            style={{ color: '#64748b', fontSize: '1rem', maxWidth: '800px', margin: '0 auto' }}
+          >
+            Whether you are a home buyer, lender, investor, or developer, we offer tailored title solutions for your next closing. We provide title insurance services in Raleigh, North Carolina and support clients with nationwide real estate transactions.
           </motion.p>
         </div>
       </section>
@@ -159,7 +167,7 @@ const Services = () => {
       <section className="section-padding" style={{ background: '#F8FAFC' }}>
         <div className="container" style={{ maxWidth: '1000px' }}>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>Owner vs. Lender Title Insurance</h2>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>Owner’s vs. Lender’s Title Insurance at a Glance</h2>
             <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Understanding the key differences in coverage and protection.</p>
           </div>
           
@@ -178,7 +186,7 @@ const Services = () => {
                   { aspect: "Coverage amount", owner: "Purchase price of the property", lender: "Outstanding loan balance" },
                   { aspect: "Duration", owner: "As long as you or your heirs own the property", lender: "Until the loan is paid off or refinanced" },
                   { aspect: "Typical requirement", owner: "Optional but strongly recommended", lender: "Typically required by lenders" },
-                  { aspect: "Main purpose", owner: "Protects your ownership and equity", lender: "Protects lender’s security interest" }
+                  { aspect: "Main purpose", owner: "Protects your ownership and equity from covered title problems", lender: "Protects lender’s security interest" }
                 ].map((row, idx) => (
                   <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0' }}>
                     <td style={{ padding: '1.25rem', fontWeight: 700, background: '#F8FAFC', width: '200px' }}>{row.aspect}</td>
@@ -194,19 +202,25 @@ const Services = () => {
 
       {/* Still Have Questions? */}
       <section className="section-padding" style={{ textAlign: 'center' }}>
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1440px' }}>
           <motion.div {...fadeIn}>
             <h2 style={{ fontSize: '2.75rem', marginBottom: '1.5rem' }}>Still Have Questions?</h2>
-            <p style={{ fontSize: '1.25rem', color: 'var(--muted)', marginBottom: '2.5rem', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
-              Not sure which type of title coverage you need? Our specialists can walk you through your options and provide a clear quote.
+            <p style={{ fontSize: '1.25rem', color: 'var(--muted)', marginBottom: '2.5rem', maxWidth: '850px', margin: '0 auto 2.5rem' }}>
+              Not sure which type of title coverage you need or managing multiple transactions? Our specialists can walk you through your options and provide a clear quote.
             </p>
-            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
               <a href="tel:+14707065858" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
                 Call Us: (470) 706-5858
               </a>
+              <span className="desktop-only" style={{ width: '1px', height: '30px', background: '#E2E8F0' }}></span>
               <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
                 Contact us Online
               </Link>
+            </div>
+            <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #E2E8F0' }}>
+              <p style={{ fontSize: '1.1rem', color: 'var(--muted)' }}>
+                To learn more about why title insurance matters, visit our <Link to="/why-title-insurance" style={{ color: 'var(--secondary)', fontWeight: 700 }}>Why Title Insurance?</Link> page.
+              </p>
             </div>
           </motion.div>
         </div>

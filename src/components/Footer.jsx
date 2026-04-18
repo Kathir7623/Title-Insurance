@@ -75,9 +75,6 @@ const Footer = () => {
               Disclaimer: This is not a commitment to insure. All services and policies are subject to underwriting approval and state-specific regulations. Information on this website is for educational purposes and does not constitute legal advice.
             </p>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--secondary)' }}>Serving Raleigh, NC and clients nationwide.</p>
-          </div>
         </div>
       </div>
     </footer>
