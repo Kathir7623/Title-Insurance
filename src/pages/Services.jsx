@@ -187,9 +187,9 @@ const Services = () => {
                   { aspect: "Main purpose", owner: "Protects your ownership and equity from covered title problems that existed before you bought the property", lender: "Protects lender’s security interest" }
                 ].map((row, idx) => (
                   <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0' }}>
-                    <td style={{ padding: '1.25rem', fontWeight: 700, background: '#F8FAFC', width: '200px' }}>{row.aspect}</td>
-                    <td style={{ padding: '1.25rem', fontSize: '0.95rem' }}>{row.owner}</td>
-                    <td style={{ padding: '1.25rem', fontSize: '0.95rem' }}>{row.lender}</td>
+                    <td data-label="Aspect" style={{ padding: '1.25rem', fontWeight: 700, background: '#F8FAFC', width: '200px' }}>{row.aspect}</td>
+                    <td data-label="Owner's Policy" style={{ padding: '1.25rem', fontSize: '0.95rem' }}>{row.owner}</td>
+                    <td data-label="Lender's Policy" style={{ padding: '1.25rem', fontSize: '0.95rem' }}>{row.lender}</td>
                   </tr>
                 ))}
               </tbody>
@@ -239,6 +239,56 @@ const Services = () => {
           .services-page ul { grid-template-columns: 1fr !important; gap: 1rem !important; }
           .service-row { gap: 2rem !important; }
           .service-image-container { height: 300px !important; }
+          
+          /* Non-scrollable Stacked Table */
+          .services-page table, 
+          .services-page thead, 
+          .services-page tbody, 
+          .services-page th, 
+          .services-page td, 
+          .services-page tr { 
+            display: block !important; 
+            width: 100% !important;
+          }
+          .services-page thead tr { 
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+          }
+          .services-page tr { 
+            border: 1px solid var(--border) !important; 
+            margin-bottom: 1.5rem !important; 
+            border-radius: 1rem !important;
+            overflow: hidden !important;
+          }
+          .services-page td { 
+            border: none !important;
+            position: relative !important;
+            padding-left: 1.5rem !important;
+            padding-top: 3rem !important;
+            white-space: normal !important;
+          }
+          .services-page td:before { 
+            position: absolute !important;
+            top: 1rem !important;
+            left: 1.5rem !important;
+            width: 100% !important; 
+            content: attr(data-label) !important;
+            font-weight: 800 !important;
+            color: var(--secondary) !important;
+            text-transform: uppercase !important;
+            font-size: 0.75rem !important;
+            letter-spacing: 0.05em !important;
+          }
+          .services-page td[data-label="Aspect"] {
+            background: var(--primary) !important;
+            color: white !important;
+            padding-top: 1.25rem !important;
+            font-size: 1.1rem !important;
+          }
+          .services-page td[data-label="Aspect"]:before {
+            display: none !important;
+          }
         }
       `}} />
     </div>

@@ -189,9 +189,9 @@ const WhyTitleInsurance = () => {
                       { aspect: "Required?", owner: "Optional but strongly recommended", lender: "Typically required by lenders" }
                     ].map((row, idx) => (
                       <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0' }}>
-                        <td style={{ padding: '1rem', fontWeight: 700, fontSize: '0.9rem', background: '#F8FAFC' }}>{row.aspect}</td>
-                        <td style={{ padding: '1rem', fontSize: '0.9rem' }}>{row.owner}</td>
-                        <td style={{ padding: '1rem', fontSize: '0.9rem' }}>{row.lender}</td>
+                        <td data-label="Aspect" style={{ padding: '1rem', fontWeight: 700, fontSize: '0.9rem', background: '#F8FAFC' }}>{row.aspect}</td>
+                        <td data-label="Owner's Policy" style={{ padding: '1rem', fontSize: '0.9rem' }}>{row.owner}</td>
+                        <td data-label="Lender's Policy" style={{ padding: '1rem', fontSize: '0.9rem' }}>{row.lender}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -241,6 +241,56 @@ const WhyTitleInsurance = () => {
           .why-insurance-page h2 { font-size: 2rem !important; }
           .why-insurance-page .section-padding { padding: 4rem 0 !important; }
           .why-insurance-page .motion-div > div { min-height: 300px !important; padding: 2.5rem !important; }
+          
+          /* Non-scrollable Stacked Table */
+          .why-insurance-page table, 
+          .why-insurance-page thead, 
+          .why-insurance-page tbody, 
+          .why-insurance-page th, 
+          .why-insurance-page td, 
+          .why-insurance-page tr { 
+            display: block !important; 
+            width: 100% !important;
+          }
+          .why-insurance-page thead tr { 
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+          }
+          .why-insurance-page tr { 
+            border: 1px solid var(--border) !important; 
+            margin-bottom: 1.5rem !important; 
+            border-radius: 1rem !important;
+            overflow: hidden !important;
+          }
+          .why-insurance-page td { 
+            border: none !important;
+            position: relative !important;
+            padding-left: 1.25rem !important;
+            padding-top: 2.75rem !important;
+            white-space: normal !important;
+          }
+          .why-insurance-page td:before { 
+            position: absolute !important;
+            top: 0.85rem !important;
+            left: 1.25rem !important;
+            width: 100% !important; 
+            content: attr(data-label) !important;
+            font-weight: 800 !important;
+            color: var(--secondary) !important;
+            text-transform: uppercase !important;
+            font-size: 0.7rem !important;
+            letter-spacing: 0.05em !important;
+          }
+          .why-insurance-page td[data-label="Aspect"] {
+            background: var(--primary) !important;
+            color: white !important;
+            padding-top: 1rem !important;
+            font-size: 1rem !important;
+          }
+          .why-insurance-page td[data-label="Aspect"]:before {
+            display: none !important;
+          }
         }
       `}} />
     </div>
