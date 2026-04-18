@@ -51,7 +51,7 @@ const About = () => {
               </p>
             </motion.div>
             <motion.div {...fadeIn}>
-              <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', height: '400px' }}>
+              <div className="image-container" style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', height: '400px' }}>
                 <img src={aboutImg} alt="KM Title Insurance Professionals" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </motion.div>
@@ -64,7 +64,7 @@ const About = () => {
         <div className="container" style={{ maxWidth: '1440px' }}>
           <div className="grid" style={{ gridTemplateColumns: '45% 1fr', alignItems: 'center', gap: '5rem' }}>
             <motion.div {...fadeIn}>
-              <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-xl)', height: '400px' }}>
+              <div className="image-container" style={{ borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-xl)', height: '400px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
                   alt="Title Experts" 
@@ -199,6 +199,8 @@ const About = () => {
           .about-page h1 { font-size: 2.5rem !important; }
           .about-page h2 { font-size: 2rem !important; }
           .about-page .section-padding { padding: 4rem 0 !important; }
+          .about-page .image-container { height: 300px !important; }
+          .about-page .image-container img { height: 100% !important; }
         }
       `}} />
     </div>
