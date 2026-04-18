@@ -54,8 +54,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem' }}>
-              Get a Quote
+            <Link to="/contact" className="btn btn-primary" style={{ padding: '0.6rem 1.4rem', fontSize: '0.9rem' }}>
+              Request a Free Title Quote
             </Link>
           </div>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer - Outside the blurred nav to avoid height constraints */}
+      {/* Mobile Menu Drawer */}
       <motion.div 
         initial={{ x: '100%' }}
         animate={{ x: isOpen ? 0 : '100%' }}
@@ -83,7 +83,8 @@ const Navbar = () => {
           padding: '2.5rem 2rem',
           display: 'flex',
           flexDirection: 'column',
-          gap: '2.5rem'
+          gap: '2.5rem',
+          visibility: isOpen ? 'visible' : 'hidden'
         }}
         className="mobile-drawer"
       >
@@ -111,7 +112,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-outline" style={{ marginTop: '1rem', width: '100%', padding: '1.2rem', background: 'white', color: 'var(--secondary)', border: 'none', fontWeight: 800 }}>
-            Get a Quote
+            Request a Free Title Quote
           </Link>
         </div>
 

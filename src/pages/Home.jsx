@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Shield, Search, FileText, Lock, Users, ChevronRight, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Shield, Search, FileText, Lock, Users, ChevronRight, CheckCircle, Star, ArrowRight, ChevronDown, Award, Clock } from 'lucide-react';
 import heroImg from '../assets/hero.png';
 
 const Home = () => {
@@ -57,6 +57,20 @@ const Home = () => {
     { step: "05", title: "Close with Confidence", desc: "Finalize your transaction worry-free." }
   ];
 
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const heroBadge = {
+    background: 'rgba(237, 122, 28, 0.15)',
+    color: 'var(--secondary)',
+    padding: '0.5rem 1rem',
+    borderRadius: '2rem',
+    fontSize: '0.9rem',
+    fontWeight: 600,
+    border: '1px solid var(--secondary)',
+    display: 'inline-block',
+    marginBottom: '1rem'
+  };
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -76,7 +90,7 @@ const Home = () => {
         }}></div>
         <img
           src={heroImg}
-          alt="Modern Home"
+          alt="Modern luxury home exterior representing property protection"
           style={{
             position: 'absolute',
             width: '100%',
@@ -101,39 +115,45 @@ const Home = () => {
             <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '550px' }}>
               Fast, accurate title insurance services for homeowners, buyers, lenders, and real estate professionals across the United States.
             </p>
-            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
               <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-                Get a Quote in 24 Hours <ArrowRight style={{ marginLeft: '0.5rem' }} />
+                Request a Free Title Quote <ArrowRight style={{ marginLeft: '0.5rem' }} />
               </Link>
               <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem', borderColor: 'white', color: 'white' }}>
-                Order a Title Search Now
+                Order a Title Search
               </Link>
             </div>
             {/* Trust Elements */}
-            <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-              <span>• Licensed in NC</span>
-              <span>• Experienced title professionals</span>
-              <span>• Serving clients nationwide</span>
+            <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <CheckCircle size={18} className="text-secondary" /> <span>Licensed in NC</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <CheckCircle size={18} className="text-secondary" /> <span>Experienced Professionals</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <CheckCircle size={18} className="text-secondary" /> <span>Serving Nationwide</span>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Who We Are / Mission Section */}
       <section className="section-padding" style={{ backgroundColor: 'white' }}>
         <div className="container">
           <div className="grid grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
             <motion.div {...fadeIn}>
-              <span className="badge">Who We Are</span>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Your Partners in Protection</h2>
+              <h2 className="badge" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>Who We Are</h2>
+              <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Your Partners in Protection</h3>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-                We are a US-based title insurance company helping homeowners, buyers, lenders, and real estate professionals close with confidence by eliminating title risks before they become costly problems.
+                Based in Raleigh, NC, KM Title Insurance is a specialized firm helping homeowners, buyers, lenders, and real estate professionals close with confidence by eliminating title risks before they become costly problems.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2rem' }}>
-                Specialized in North Carolina and multi-state transactions, we act as the ideal partner for real estate agents, attorneys, and lenders who want reliable title support on every deal.
+                Serving clients across North Carolina and nationwide, we act as the ideal partner for real estate agents, attorneys, and lenders who want reliable title support and proactive communication on every deal.
               </p>
               <div style={{ padding: '2rem', borderLeft: '4px solid var(--secondary)', background: '#F8FAFC' }}>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Our Mission</h3>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Our Mission</h4>
                 <p style={{ color: 'var(--muted)' }}>To deliver clear title, on time, so closings never get delayed and your investment stays protected.</p>
               </div>
             </motion.div>
@@ -141,26 +161,36 @@ const Home = () => {
               {...fadeIn}
               style={{ position: 'relative' }}
             >
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="Professional Consultation" style={{ borderRadius: 'var(--radius)', width: '100%', boxShadow: 'var(--shadow-lg)' }} />
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="Professional real estate consultation session" style={{ borderRadius: 'var(--radius)', width: '100%', boxShadow: 'var(--shadow-lg)' }} />
               <div style={{
                 position: 'absolute',
                 bottom: '-2rem',
                 right: '-2rem',
                 background: 'var(--secondary)',
                 color: 'white',
-                padding: '2rem',
+                padding: '1.5rem 2rem',
                 borderRadius: 'var(--radius)',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem'
               }} className="exp-box">
-                <span style={{ fontSize: '3rem', fontWeight: 800 }}>15+</span>
-                <p>Over 10k successful<br />closings supported</p>
+                <div style={{ textAlign: 'center' }}>
+                  <span style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>15+</span>
+                  <p style={{ fontSize: '0.85rem' }}>Years Experience</p>
+                </div>
+                <div style={{ height: '1px', background: 'rgba(255,255,255,0.2)' }} />
+                <div style={{ textAlign: 'center' }}>
+                  <span style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>10k+</span>
+                  <p style={{ fontSize: '0.85rem' }}>Closings Supported</p>
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Understanding Section */}
+      {/* Education / Understanding Section */}
       <section className="section-padding" style={{ backgroundColor: '#0F172A', color: 'white' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
@@ -170,29 +200,38 @@ const Home = () => {
               If you are buying, refinancing, or investing, title insurance protects you from past issues that could threaten your ownership later.
             </p>
           </div>
+          
+          <p style={{ textAlign: 'center', color: '#cbd5e1', marginBottom: '2rem', fontSize: '1.1rem' }}>
+            Here are some common issues title insurance helps protect against:
+          </p>
+
           <div className="grid grid-cols-4">
             {[
-              { title: "Unknown Liens", desc: "Example: A previous owner’s unpaid contractor bill becomes your problem after closing." },
-              { title: "Ownership Disputes", desc: "Example: Long-lost family members emerging to claim rights to your land." },
-              { title: "Fraud or Forgery", desc: "Example: Illegal transfer of property through falsified signatures on past deeds." },
-              { title: "Public Record Errors", desc: "Example: Mistakes in legal documentation or misfiled paperwork that cloud your title." }
+              { title: "Unknown Liens", icon: <Lock />, desc: "Unpaid property taxes or contractor bills from previous owners." },
+              { title: "Ownership Disputes", icon: <Users />, desc: "Claims from long-lost heirs or errors in legal documentation." },
+              { title: "Fraud or Forgery", icon: <Shield />, desc: "Falsified signatures on past deeds or illegal property transfers." },
+              { title: "Record Errors", icon: <Search />, desc: "Clerical mistakes in public records that cloud your ownership." }
             ].map((item, idx) => (
               <motion.div
                 key={idx}
                 {...fadeIn}
                 transition={{ delay: idx * 0.1 }}
                 className="card"
-                style={{ background: '#1e293b', borderColor: '#334155' }}
+                style={{ background: '#1e293b', borderColor: '#334155', textAlign: 'center' }}
               >
-                <CheckCircle className="text-secondary" style={{ marginBottom: '1rem' }} />
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'white' }}>{item.title}</h3>
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem' }}>{item.desc}</p>
+                <div style={{ color: 'var(--secondary)', marginBottom: '1.25rem', display: 'flex', justifyContent: 'center' }}>
+                  {React.cloneElement(item.icon, { size: 32 })}
+                </div>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'white' }}>{item.title}</h4>
+                <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>{item.desc}</p>
               </motion.div>
             ))}
           </div>
-          <div style={{ marginTop: '3rem', textAlign: 'center', padding: '2.5rem', background: 'rgba(237, 122, 28, 0.1)', borderRadius: 'var(--radius)', border: '1px dashed var(--secondary)' }}>
-            <p style={{ fontSize: '1.25rem', color: 'var(--secondary)', fontWeight: 600, marginBottom: '1rem' }}>Without title insurance, your dream property could become a legal nightmare.</p>
-            <Link to="/contact" className="btn btn-primary">Get protected before you close</Link>
+          <div style={{ marginTop: '4rem', textAlign: 'center', padding: '3rem', background: 'rgba(237, 122, 28, 0.08)', borderRadius: 'var(--radius)', border: '1px dashed var(--secondary)' }}>
+            <p style={{ fontSize: '1.35rem', color: '#f8fafc', fontWeight: 600, marginBottom: '1.5rem' }}>Without title insurance, your dream property could become a legal nightmare.</p>
+            <Link to="/contact" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
+              Get protected before you close
+            </Link>
           </div>
         </div>
       </section>
@@ -205,50 +244,79 @@ const Home = () => {
             <h2 style={{ fontSize: '3rem', marginBottom: '1.25rem' }}>Comprehensive Solutions</h2>
             <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Tailored title and escrow support for every party in the transaction.</p>
           </div>
-          <div className="grid grid-cols-3">
-            {[
-              { 
-                icon: <Shield />, 
-                title: "Owner’s Title Insurance", 
-                desc: "Ideal for buyers and homeowners who want lifetime protection from hidden title issues." 
-              },
-              { 
-                icon: <Lock />, 
-                title: "Lender’s Title Insurance", 
-                desc: "Gives your lender confidence that their mortgage is secured by a clear title." 
-              },
-              { 
-                icon: <Search />, 
-                title: "Title Search & Examination", 
-                desc: "Helps buyers and agents avoid surprises and ownership defects before closing day." 
-              },
-              { 
-                icon: <FileText />, 
-                title: "Title Settlement Services", 
-                desc: "We coordinate documents, recording, and funds so closing day is smooth and on-time." 
-              },
-              { 
-                icon: <Users />, 
-                title: "Escrow & Closing Support", 
-                desc: "Secure, neutral handling of earnest money and legal docs to protect all parties." 
-              },
-              { 
-                icon: <Search />, 
-                title: "Commercial Title Services", 
-                desc: "Specialized support for complex commercial property acquisitions and multi-state deals." 
-              }
-            ].map((s, i) => (
-              <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="card">
-                <div style={{ marginBottom: '1.5rem', color: 'var(--secondary)' }}>
-                  {React.cloneElement(s.icon, { size: 40 })}
-                </div>
-                <h3 style={{ marginBottom: '1rem' }}>{s.title}</h3>
-                <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{s.desc}</p>
-                <Link to="/contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontWeight: 600 }}>
-                  Request a Quote <ArrowRight size={16} />
-                </Link>
-              </motion.div>
-            ))}
+
+          <div style={{ marginBottom: '5rem' }}>
+            <h3 style={{ fontSize: '1.75rem', marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <span style={{ width: '40px', height: '4px', background: 'var(--secondary)', display: 'block' }}></span>
+              For Buyers & Owners
+            </h3>
+            <div className="grid grid-cols-3">
+              {[
+                { 
+                  icon: <Shield />, 
+                  title: "Owner’s Title Insurance", 
+                  desc: "Ideal for buyers and homeowners who want lifetime protection from hidden title issues." 
+                },
+                { 
+                  icon: <Search />, 
+                  title: "Title Search & Examination", 
+                  desc: "Helps buyers and agents avoid surprises and ownership defects before closing day." 
+                },
+                { 
+                  icon: <Users />, 
+                  title: "Escrow & Closing Support", 
+                  desc: "Secure, neutral handling of earnest money and legal docs to protect all parties." 
+                }
+              ].map((s, i) => (
+                <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="card">
+                  <div style={{ marginBottom: '1.25rem', color: 'var(--secondary)' }}>
+                    {React.cloneElement(s.icon, { size: 36 })}
+                  </div>
+                  <h4 style={{ marginBottom: '0.75rem', fontSize: '1.35rem' }}>{s.title}</h4>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.95rem', minHeight: '3rem' }}>{s.desc}</p>
+                  <Link to="/contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontWeight: 600 }}>
+                    Request a Quote <ArrowRight size={16} />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 style={{ fontSize: '1.75rem', marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <span style={{ width: '40px', height: '4px', background: 'var(--secondary)', display: 'block' }}></span>
+              For Lenders & Commercial Clients
+            </h3>
+            <div className="grid grid-cols-3">
+              {[
+                { 
+                  icon: <Lock />, 
+                  title: "Lender’s Title Insurance", 
+                  desc: "Gives your lender confidence that their mortgage is secured by a clear title." 
+                },
+                { 
+                  icon: <FileText />, 
+                  title: "Title Settlement Services", 
+                  desc: "We coordinate documents, recording, and funds so closing day is smooth and on-time." 
+                },
+                { 
+                  icon: <Search />, 
+                  title: "Commercial Title Services", 
+                  desc: "Specialized support for complex commercial property acquisitions and multi-state deals." 
+                }
+              ].map((s, i) => (
+                <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="card">
+                  <div style={{ marginBottom: '1.25rem', color: 'var(--secondary)' }}>
+                    {React.cloneElement(s.icon, { size: 36 })}
+                  </div>
+                  <h4 style={{ marginBottom: '0.75rem', fontSize: '1.35rem' }}>{s.title}</h4>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.95rem', minHeight: '3rem' }}>{s.desc}</p>
+                  <Link to="/contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontWeight: 600 }}>
+                    Request a Quote <ArrowRight size={16} />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -258,10 +326,10 @@ const Home = () => {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 style={{ fontSize: '3rem', marginBottom: '1.25rem' }}>Why Choose KM Title?</h2>
-            <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Providing quick turnarounds and absolute transparency on every deal.</p>
+            <p style={{ color: 'var(--muted)', fontSize: '1.25rem' }}>Choose a title partner that keeps your transaction moving and keeps you informed at every step.</p>
           </div>
 
-          <div className="grid grid-cols-2" style={{ gap: '4rem', marginBottom: '8rem' }}>
+          <div className="grid grid-cols-2" style={{ gap: '3rem', marginBottom: '6rem' }}>
             {[
               { title: "Fast & Accurate Title Search", benefit: "Quick turnarounds so your closing doesn't get delayed." },
               { title: "100% Transparent Process", benefit: "Clear communication at every step, with no hidden fees." },
@@ -270,13 +338,13 @@ const Home = () => {
               { title: "Secure Transactions", benefit: "State-of-the-art protected handling of funds and sensitive information." },
               { title: "Dedicated Customer Support", benefit: "Easy access to our team by phone and email for any questions." }
             ].map((feature, i) => (
-              <motion.div key={i} {...fadeIn} style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                <div style={{ width: '48px', height: '48px', background: 'white', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-                  <CheckCircle className="text-secondary" />
+              <motion.div key={i} {...fadeIn} style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start', background: 'white', padding: '1.5rem', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-sm)' }}>
+                <div style={{ width: '40px', height: '40px', background: 'rgba(237, 122, 28, 0.1)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <CheckCircle className="text-secondary" size={20} />
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{feature.title}</h4>
-                  <p style={{ color: 'var(--muted)' }}>{feature.benefit}</p>
+                  <h4 style={{ fontSize: '1.15rem', marginBottom: '0.4rem' }}>{feature.title}</h4>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{feature.benefit}</p>
                 </div>
               </motion.div>
             ))}
@@ -286,62 +354,67 @@ const Home = () => {
             {[
               { 
                 text: "“Smooth and hassle-free closing process. Their communication was miles ahead of other companies we've used in the past.”",
-                role: "Real Estate Agent in Raleigh, NC"
+                author: "Residential Agent",
+                location: "Raleigh, NC"
               },
               { 
                 text: "“As a first-time buyer, I was nervous about title risks. KM Title explained everything and protected my investment.”",
-                role: "First-Time Homebuyer"
+                author: "First‑Time Homebuyer",
+                location: "Purchase in Raleigh, NC"
               }
             ].map((t, idx) => (
-              <motion.div key={idx} {...fadeIn} style={{ padding: '3rem', background: 'white', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)', textAlign: 'left' }}>
-                <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1rem' }}>
-                  {[1, 2, 3, 4, 5].map(i => <Star key={i} fill="var(--secondary)" color="var(--secondary)" size={20} />)}
+              <motion.div key={idx} {...fadeIn} style={{ padding: '3rem', background: 'white', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)', textAlign: 'left', borderTop: '4px solid var(--secondary)' }}>
+                <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem' }}>
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} fill="var(--secondary)" color="var(--secondary)" size={18} />)}
                 </div>
-                <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: 1.6 }}>{t.text}</p>
-                <p style={{ fontWeight: 700, color: 'var(--primary)' }}>{t.role}</p>
+                <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: 1.6, color: 'var(--primary-light)' }}>{t.text}</p>
+                <div>
+                  <p style={{ fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>{t.author}</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>{t.location}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works (Process) */}
       <section className="section-padding">
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 style={{ fontSize: '3rem', marginBottom: '1.25rem' }}>How It Works</h2>
-            <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>A simple 5-step process that takes you from title search to confident closing.</p>
+            <p style={{ color: 'var(--muted)', fontSize: '1.25rem', marginBottom: '1rem' }}>A simple 5-step process that takes you from title search to confident closing.</p>
+            <p style={{ color: 'var(--secondary)', fontWeight: 600 }}>Most title searches and preliminary reports are completed within 3–5 business days.</p>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', flexWrap: 'wrap', gap: '2rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', flexWrap: 'wrap', gap: '2.5rem' }}>
             {[
-              { title: "Order Title Search", desc: "Share your property and transaction details in a simple online form." },
-              { title: "We Examine Records", desc: "We review deeds, liens, and public records to spot risks early." },
-              { title: "Resolve Any Issues", desc: "We clear any liens or ownership disputes before closing day." },
-              { title: "Issue Policy", desc: "We issue your title insurance policy for long-term protection." },
-              { title: "Close with Confidence", desc: "You finalize your transaction knowing your ownership is protected." }
+              { title: "Order Title Search", icon: <FileText />, desc: "Share your property and transaction details in a simple online form." },
+              { title: "We Examine Records", icon: <Search />, desc: "We review deeds, liens, and public records to spot risks early." },
+              { title: "Resolve Any Issues", icon: <Shield />, desc: "We clear any liens or ownership disputes before closing day." },
+              { title: "Issue Policy", icon: <Award />, desc: "We issue your title insurance policy for long-term protection." },
+              { title: "Close with Confidence", icon: <CheckCircle />, desc: "You finalize your transaction knowing your ownership is protected." }
             ].map((step, i) => (
               <motion.div
                 key={i}
                 {...fadeIn}
                 transition={{ delay: i * 0.1 }}
-                style={{ textAlign: 'center', flex: 1, minWidth: '200px' }}
+                style={{ textAlign: 'center', flex: 1, minWidth: '220px' }}
               >
                 <div style={{
-                  width: '60px',
-                  height: '60px',
+                  width: '70px',
+                  height: '70px',
                   background: 'var(--secondary)',
                   color: 'white',
-                  borderRadius: '50%',
+                  borderRadius: '1.5rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  fontWeight: 800,
-                  margin: '0 auto 1.5rem'
+                  boxShadow: '0 8px 20px rgba(237, 122, 28, 0.3)',
+                  margin: '0 auto 2rem'
                 }}>
-                  {i + 1}
+                  {React.cloneElement(step.icon, { size: 32 })}
                 </div>
-                <h3 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>{step.title}</h3>
+                <h4 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>{step.title}</h4>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>{step.desc}</p>
               </motion.div>
             ))}
@@ -364,14 +437,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section style={{ padding: '8rem 0', background: 'var(--background-alt)' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
+      {/* FAQ Section (Accordion) */}
+      <section style={{ padding: '8rem 0', background: '#F8FAFC' }}>
+        <div className="container" style={{ maxWidth: '900px' }}>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Common Questions</h2>
-            <p style={{ color: 'var(--muted)' }}>Expert answers to the most common title insurance inquiries.</p>
+            <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Expert answers to the most common title insurance inquiries for owners, agents, and lenders.</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
               { 
                 q: "Do I need owner's title insurance if I'm buying cash?", 
@@ -382,14 +455,38 @@ const Home = () => {
                 a: "A comprehensive title search includes a review of public records relating to the property's history, including deeds, mortgages, tax liens, judgments, and easements to ensure clear ownership."
               },
               { 
+                q: "Can you work directly with my real estate agent and lender?", 
+                a: "Yes, we regularly coordinate with agents, lenders, and attorneys to keep all parties aligned and closings on schedule. We are multi-state experts capable of handling complex coordinate needs."
+              },
+              { 
                 q: "How long does it take to get title insurance?", 
-                a: "Most title searches and preliminary reports are completed within 3-5 business days. Complex properties or multi-state transactions may take longer depending on record availability."
+                a: "Most title searches and preliminary reports are completed within 3–5 business days. Complex properties or multi-state transactions may take longer depending on record availability."
               }
             ].map((faq, idx) => (
-              <motion.div key={idx} {...fadeIn} style={{ padding: '1.5rem', background: 'white', borderRadius: '12px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
-                <h4 style={{ marginBottom: '0.75rem', color: 'var(--primary)' }}>{faq.q}</h4>
-                <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>{faq.a}</p>
-              </motion.div>
+              <div key={idx} style={{ border: '1px solid var(--border)', borderRadius: '12px', background: 'white', overflow: 'hidden' }}>
+                <button 
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  style={{ width: '100%', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer' }}
+                >
+                  <span style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--primary)' }}>{faq.q}</span>
+                  <ChevronDown size={20} style={{ transform: openFaq === idx ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.3s ease', color: 'var(--secondary)' }} />
+                </button>
+                <AnimatePresence>
+                  {openFaq === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ overflow: 'hidden' }}
+                    >
+                      <div style={{ padding: '0 2rem 1.5rem', color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
           </div>
         </div>
