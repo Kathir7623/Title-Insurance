@@ -39,6 +39,8 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <li style={{ color: '#94a3b8' }}>Owner's Title Insurance</li>
               <li style={{ color: '#94a3b8' }}>Lender's Title Insurance</li>
+              <li style={{ color: '#94a3b8' }}>Title Search & Examination</li>
+              <li style={{ color: '#94a3b8' }}>Title Settlement Services</li>
             </ul>
           </div>
 
@@ -70,11 +72,11 @@ const Footer = () => {
               © {new Date().getFullYear()} KM Title Insurance. All rights reserved.
             </p>
             <p style={{ fontSize: '0.75rem', color: '#475569', lineHeight: 1.5 }}>
-              Disclaimer: This is not a commitment to insure. All services and policies are subject to underwriting approval and state-specific regulations. Information provided on this website is for educational purposes and does not constitute legal advice.
+              Disclaimer: This is not a commitment to insure. All services and policies are subject to underwriting approval and state-specific regulations. Information on this website is for educational purposes and does not constitute legal advice.
             </p>
           </div>
           <div style={{ textAlign: 'right' }}>
-            <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--secondary)' }}>Protecting Your Property, Securing Your Future.</p>
+            <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--secondary)' }}>Serving Raleigh, NC and clients nationwide.</p>
           </div>
         </div>
       </div>
