@@ -14,6 +14,9 @@ const Footer = () => {
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
               Trusted US-based Title Insurance company dedicated to protecting homeowners, buyers, and lenders from potential title risks.
             </p>
+            <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', fontWeight: 600 }}>
+              Serving Raleigh, NC and clients across the United States.
+            </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="#" style={{ color: '#94a3b8' }}><Share2 size={20} /></a>
             </div>
@@ -53,6 +56,9 @@ const Footer = () => {
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <Phone size={20} style={{ color: 'var(--secondary)' }} />
                 <span>(470) 706-5858</span>
+              </li>
+              <li style={{ fontSize: '0.85rem', color: 'var(--secondary)', paddingLeft: '2.25rem' }}>
+                Mon–Fri: 9 AM–5 PM EST
               </li>
             </ul>
           </div>

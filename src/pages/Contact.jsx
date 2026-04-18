@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock, Shield } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Clock, Shield, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const fadeIn = {
@@ -129,7 +129,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <motion.div {...fadeIn} style={{ background: 'white', padding: '3rem', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}>
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '2rem' }}>Send Us a Message</h3>
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '2rem' }}>Request a Free Title Quote</h3>
               <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -141,19 +141,34 @@ const Contact = () => {
                     <input type="email" placeholder="john@example.com" style={inputStyle} />
                   </div>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Service Needed</label>
-                  <select style={inputStyle}>
-                    <option>Owner's Title Insurance</option>
-                    <option>Lender's Title Insurance</option>
-                  </select>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Who are you?</label>
+                    <select style={inputStyle}>
+                      <option>Home Buyer</option>
+                      <option>Home Seller</option>
+                      <option>Real Estate Agent</option>
+                      <option>Lender / Bank</option>
+                      <option>Investor</option>
+                    </select>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Service Needed</label>
+                    <select style={inputStyle}>
+                      <option>Owner's Title Insurance</option>
+                      <option>Lender's Title Insurance</option>
+                      <option>Title Search & Examination</option>
+                      <option>Settlement / Closing</option>
+                      <option>Escrow Services</option>
+                    </select>
+                  </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Your Message</label>
                   <textarea placeholder="How can we help you today?" style={{ ...inputStyle, height: '150px', resize: 'none' }}></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary" style={{ padding: '1rem' }}>
-                  Send Message <Send size={18} />
+                  Start Your Title Order <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
                 </button>
               </form>
             </motion.div>
