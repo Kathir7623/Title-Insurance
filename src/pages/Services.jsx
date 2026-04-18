@@ -17,7 +17,7 @@ const Services = () => {
       icon: <Shield size={40} className="text-secondary" />,
       title: "Owner’s Title Insurance",
       cta: "Request an Owner’s Policy Quote",
-      desc: "An Owner's Policy protects you, the property owner, from title defects that could arise after closing. It is issued for the full purchase price and stays in effect as long as you or your heirs own the property.",
+      desc: "An Owner's Policy protects you, the property owner, from title defects that could arise after closing. For a one-time premium at closing, you receive long-term protection against covered title issues for as long as you own the property.",
       features: [
         "Protects against fraud and forgery", 
         "Covers ownership disputes", 
@@ -31,10 +31,10 @@ const Services = () => {
       cta: "Order Lender’s Title Coverage",
       desc: "A Lender's Policy ensures the mortgage lender’s investment is protected and is typically required by mortgage lenders to protect their security interest in the property.",
       features: [
-        "Protects lender priority", 
-        "Ensures valid mortgage lien", 
+        "Protects lender priority and ensures a valid mortgage lien", 
         "Coverage tied to outstanding loan balance", 
-        "Typically required by lenders"
+        "Typically required by bank lenders",
+        "Protects lender from hidden ownership claims"
       ]
     },
     {
@@ -43,9 +43,9 @@ const Services = () => {
       cta: "Order a Title Search",
       desc: "We carefully review public records, deeds, liens, and legal documents to identify issues that could affect ownership or delay your closing, typically before you sign a purchase contract.",
       features: [
-        "Identify existing liens & judgments", 
+        "Identify existing liens and judgments", 
         "Confirm correct chain of title", 
-        "Flag easements & restrictions", 
+        "Flag easements and restrictions", 
         "Prevent surprises before closing"
       ]
     },
@@ -53,7 +53,7 @@ const Services = () => {
       icon: <FileText size={40} className="text-secondary" />,
       title: "Title Settlement Services",
       cta: "Request Settlement Support",
-      desc: "We coordinate the final steps of your transaction so closing day goes smoothly, managing documentation and funds with absolute precision.",
+      desc: "We coordinate the final steps of your transaction so closing day goes smoothly, managing documentation and funds with precision.",
       features: [
         "Prepare final title documents", 
         "Coordinate with all deal parties", 
@@ -89,7 +89,7 @@ const Services = () => {
             transition={{ delay: 0.3 }}
             style={{ color: '#64748b', fontSize: '1rem', maxWidth: '800px', margin: '0 auto' }}
           >
-            Whether you are a home buyer, lender, investor, or developer, we offer tailored title solutions for your next closing. We provide title insurance services in Raleigh, North Carolina and support clients with nationwide real estate transactions.
+            Whether you are a home buyer, lender, investor, or developer, we offer tailored title solutions for your next closing. We provide title insurance services in Raleigh, North Carolina and support clients with real estate transactions nationwide. Our experienced team helps keep your closings smooth, compliant, and on schedule.
           </motion.p>
         </div>
       </section>
@@ -186,7 +186,7 @@ const Services = () => {
                   { aspect: "Coverage amount", owner: "Purchase price of the property", lender: "Outstanding loan balance" },
                   { aspect: "Duration", owner: "As long as you or your heirs own the property", lender: "Until the loan is paid off or refinanced" },
                   { aspect: "Typical requirement", owner: "Optional but strongly recommended", lender: "Typically required by lenders" },
-                  { aspect: "Main purpose", owner: "Protects your ownership and equity from covered title problems", lender: "Protects lender’s security interest" }
+                  { aspect: "Main purpose", owner: "Protects your ownership and equity from covered title problems that existed before you bought the property", lender: "Protects lender’s security interest" }
                 ].map((row, idx) => (
                   <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0' }}>
                     <td style={{ padding: '1.25rem', fontWeight: 700, background: '#F8FAFC', width: '200px' }}>{row.aspect}</td>
@@ -212,14 +212,14 @@ const Services = () => {
               <a href="tel:+14707065858" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
                 Call Us: (470) 706-5858
               </a>
-              <span className="desktop-only" style={{ width: '1px', height: '30px', background: '#E2E8F0' }}></span>
+              <span className="desktop-only" style={{ opacity: 0.5, fontSize: '1.5rem' }}>·</span>
               <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
                 Contact us Online
               </Link>
             </div>
             <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #E2E8F0' }}>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)' }}>
-                To learn more about why title insurance matters, visit our <Link to="/why-title-insurance" style={{ color: 'var(--secondary)', fontWeight: 700 }}>Why Title Insurance?</Link> page.
+                To learn more about why title insurance matters and how it protects your property, visit our <Link to="/why-title-insurance" style={{ color: 'var(--secondary)', fontWeight: 700 }}>Why Title Insurance?</Link> page.
               </p>
             </div>
           </motion.div>
