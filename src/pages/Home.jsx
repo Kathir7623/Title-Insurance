@@ -510,11 +510,12 @@ const Home = () => {
           }
           .exp-box {
             position: relative !important;
-            inset: auto !important;
-            margin-top: 2rem !important;
-            max-width: 100% !important;
-            bottom: auto !important;
-            right: auto !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            margin: 2rem auto 0 !important;
+            max-width: 320px !important;
+            width: 100% !important;
+            text-align: center !important;
           }
           .home-page h3 { font-size: 1.75rem !important; }
           .home-page h2 { font-size: 2rem !important; }
@@ -524,6 +525,8 @@ const Home = () => {
           .grid-cols-2, .grid-cols-3, .grid-cols-4 {
             grid-template-columns: 1fr !important;
           }
+          
+          .home-page .section-padding { padding: 3rem 0 !important; }
         }
       `}} />
     </div>
