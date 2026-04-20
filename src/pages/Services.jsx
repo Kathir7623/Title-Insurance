@@ -21,7 +21,7 @@ const Services = () => {
       icon: <Shield size={40} className="text-secondary" />,
       image: ownersImg,
       title: "Owner’s Title Insurance",
-      cta: "Request an Owner’s Policy Quote",
+      cta: "Get your owner’s title quote",
       desc: "An Owner's Policy protects you, the property owner, from title defects that could arise after closing. For a one-time premium at closing, you receive long-term protection against covered title issues for as long as you own the property.",
       features: [
         "Protects against fraud and forgery", 
@@ -34,7 +34,7 @@ const Services = () => {
       icon: <Lock size={40} className="text-secondary" />,
       image: lendersImg,
       title: "Lender’s Title Insurance",
-      cta: "Order Lender’s Title Coverage",
+      cta: "Schedule a lender closing call",
       desc: "A Lender's Policy ensures the mortgage lender’s investment is protected and is typically required by most mortgage lenders to protect their security interest in the property.",
       features: [
         "Protects lender priority and ensures a valid mortgage lien", 
@@ -47,7 +47,7 @@ const Services = () => {
       icon: <Search size={40} className="text-secondary" />,
       image: searchImg,
       title: "Title Search & Examination",
-      cta: "Order a Title Search",
+      cta: "Order a detailed Title Search",
       desc: "We carefully review public records, deeds, liens, and legal documents to identify issues that could affect ownership or delay your closing, typically before you sign a purchase contract.",
       features: [
         "Identify existing liens and judgments", 
@@ -60,7 +60,7 @@ const Services = () => {
       icon: <FileText size={40} className="text-secondary" />,
       image: settlementImg,
       title: "Title Settlement Services",
-      cta: "Request Settlement Support",
+      cta: "Partner with KM Title on your next listing",
       desc: "We coordinate the final steps of your transaction so closing day goes smoothly, managing documentation and funds with precision.",
       features: [
         "Prepare final title documents", 

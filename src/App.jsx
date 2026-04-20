@@ -25,6 +25,32 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          
+          {/* Floating Action Button */}
+          <Link 
+            to="/contact" 
+            className="fab"
+            style={{
+              position: 'fixed',
+              bottom: '2rem',
+              right: '2rem',
+              background: 'var(--secondary)',
+              color: 'white',
+              width: '160px',
+              height: '56px',
+              borderRadius: '28px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontWeight: 800,
+              boxShadow: '0 10px 25px rgba(237, 122, 28, 0.4)',
+              zIndex: 1000,
+              textDecoration: 'none',
+              fontSize: '0.95rem'
+            }}
+          >
+            Get a Quote →
+          </Link>
         </div>
       </Router>
     </HelmetProvider>

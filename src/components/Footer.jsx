@@ -50,16 +50,20 @@ const Footer = () => {
               </li>
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <Mail size={20} style={{ color: 'var(--secondary)' }} />
-                <span>support@kmtitleinsurance.com</span>
+                <a href="mailto:support@kmtitleinsurance.com" style={{ color: '#94a3b8', textDecoration: 'none' }}>support@kmtitleinsurance.com</a>
               </li>
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <Phone size={20} style={{ color: 'var(--secondary)' }} />
-                <span>(470) 706-5858</span>
+                <a href="tel:4707065858" style={{ color: '#94a3b8', textDecoration: 'none' }}>(470) 706-5858</a>
               </li>
-              <li style={{ fontSize: '0.85rem', color: 'var(--secondary)', paddingLeft: '2.25rem' }}>
+              <li style={{ fontSize: '0.85rem', color: 'var(--secondary)', paddingLeft: '2.75rem' }}>
                 Mon–Fri: 9 AM–5 PM EST
               </li>
             </ul>
+            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ padding: '0.5rem 1rem', border: '1px solid #334155', borderRadius: '4px', fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>Licensed in NC</div>
+              <div style={{ padding: '0.5rem 1rem', border: '1px solid #334155', borderRadius: '4px', fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>ALTA Member</div>
+            </div>
           </div>
         </div>
 

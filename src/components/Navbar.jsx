@@ -29,8 +29,22 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  return (
-    <>
+      {/* Top Bar */}
+      <div style={{ background: '#0f172a', borderBottom: '1px solid #1e293b', padding: '0.5rem 0', display: 'flex', justifyContent: 'center' }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', color: '#94a3b8' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <span style={{ color: 'var(--secondary)', fontWeight: 600 }}>Serving NC and Nationwide</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Phone size={14} className="text-secondary" />
+              <a href="tel:4707065858" style={{ color: '#94a3b8', textDecoration: 'none' }}>(470) 706-5858</a>
+            </div>
+          </div>
+          <div className="desktop-only">
+             <Link to="/contact" style={{ color: 'white', fontWeight: 600, textDecoration: 'none' }}>Get a Quote →</Link>
+          </div>
+        </div>
+      </div>
+
       <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '110px', transition: 'height 0.3s ease' }}>
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
@@ -55,14 +69,19 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact" className="btn btn-primary" style={{ padding: '0.6rem 1.4rem', fontSize: '0.9rem' }}>
-              Request a Free Title Quote
+              Request a Free Quote
             </Link>
           </div>
 
-          {/* Mobile Toggle */}
-          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: 'white', padding: '0.5rem', border: 'none', background: 'none' }}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Mobile Toggle Group */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <a href="tel:4707065858" className="mobile-only" style={{ color: 'white' }}>
+              <Phone size={24} />
+            </a>
+            <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: 'white', padding: '0.5rem', border: 'none', background: 'none' }}>
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -150,6 +169,9 @@ const Navbar = () => {
         }
         .nav-link:hover:after { width: 100%; }
         
+        .desktop-only { display: block; }
+        .mobile-only { display: none; }
+        
         @media (max-width: 991px) {
           .desktop-menu { gap: 1rem; }
           .nav-link { font-size: 0.85rem; }
@@ -160,6 +182,8 @@ const Navbar = () => {
           .mobile-toggle { display: block !important; }
           .nav-container { height: 75px !important; }
           .nav-logo { height: 50px !important; }
+          .desktop-only { display: none !important; }
+          .mobile-only { display: block !important; }
         }
         
         @media (max-width: 480px) {

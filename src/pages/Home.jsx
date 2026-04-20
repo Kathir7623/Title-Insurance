@@ -74,9 +74,9 @@ const Home = () => {
   return (
     <div className="home-page">
       <SEO 
-        title="Trusted Title Insurance Raleigh NC & Nationwide"
-        description="Expert title insurance services protecting homeowners and lenders in North Carolina and across the USA. Fast title search and secure closings."
-        keywords="title insurance Raleigh NC, title insurance North Carolina, residential title insurance, commercial title insurance USA, real estate closing support"
+        title="Title Insurance & Closing Services Raleigh NC | KM Title Insurance"
+        description="Elite title insurance and closing services in Raleigh, NC and nationwide. Protecting buyers, sellers, investors, and lenders with fast, secure property protection."
+        keywords="title insurance Raleigh NC, title insurance North Carolina, real estate closing Raleigh, title search Raleigh, US title insurance"
       />
       {/* Hero Section */}
       <section className="hero" style={{
@@ -102,64 +102,88 @@ const Home = () => {
             height: '100%',
             objectFit: 'cover',
             right: 0,
-            top: 0
+            top: 0,
+            zIndex: 0
           }}
         />
+        <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>
+          <div style={{ maxWidth: '850px' }}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div style={heroBadge}>Experienced Title Professionals</div>
+              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+                Title Insurance & Closing Services <br className="desktop-only" />
+                <span className="text-secondary">in Raleigh, NC and Nationwide.</span>
+              </h1>
+              <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.6 }}>
+                Serving Raleigh, NC and nationwide title insurance needs for buyers, sellers, investors, and lenders. We provide the expert protection your investment deserves.
+              </p>
+              
+              <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem' }}>
+                  Request a Free Title Quote
+                </Link>
+                <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                  Why Title Insurance? <ArrowRight size={20} />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-        <div className="container hero-container" style={{ position: 'relative', zIndex: 2, width: '100%' }}>
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            style={{ maxWidth: '650px' }}
-          >
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: 'white', marginBottom: '1.5rem', lineHeight: 1.1 }}>
-              Protect Your Property. <br />
-              <span style={{ color: 'var(--secondary)' }}>Secure Your Future.</span>
-            </h1>
-            <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '550px' }}>
-              Fast, accurate title insurance services for homeowners, buyers, lenders, and real estate professionals across the United States.
-            </p>
-            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-              <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-                Request a Free Title Quote <ArrowRight style={{ marginLeft: '0.5rem' }} />
-              </Link>
-              <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem', borderColor: 'white', color: 'white' }}>
-                Order a Title Search
-              </Link>
-            </div>
-            {/* Trust Elements */}
-            <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem', display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle size={18} className="text-secondary" /> <span>Licensed in NC</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle size={18} className="text-secondary" /> <span>Experienced Professionals</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle size={18} className="text-secondary" /> <span>Serving Nationwide</span>
-              </div>
-            </div>
-          </motion.div>
+      {/* Audience Segmentation */}
+      <section className="section-padding" style={{ background: 'white' }}>
+        <div className="container">
+          <div className="grid grid-cols-3" style={{ gap: '3rem' }}>
+            <motion.div {...fadeIn} style={{ textAlign: 'left' }}>
+              <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>For Homebuyers & Owners</span>
+              <h3 style={{ marginBottom: '1rem' }}>Secure Your Dream Home</h3>
+              <p style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>Ideal for buyers who want lifetime protection from hidden title issues and past risks.</p>
+              <Link to="/services" className="text-secondary" style={{ fontWeight: 600 }}>Get your owner’s title quote →</Link>
+            </motion.div>
+            <motion.div {...fadeIn} transition={{ delay: 0.1 }} style={{ textAlign: 'left' }}>
+              <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>For Real Estate Agents & Attorneys</span>
+              <h3 style={{ marginBottom: '1rem' }}>Streamline Your Closings</h3>
+              <p style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>Partner with KM Title on your next listing for proactive communication and fast curative work.</p>
+              <Link to="/contact" className="text-secondary" style={{ fontWeight: 600 }}>Partner with us →</Link>
+            </motion.div>
+            <motion.div {...fadeIn} transition={{ delay: 0.2 }} style={{ textAlign: 'left' }}>
+              <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>For Lenders & Investors</span>
+              <h3 style={{ marginBottom: '1rem' }}>Professional Asset Protection</h3>
+              <p style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>Full multi-state support for complex acquisitions and nationwide lender security.</p>
+              <Link to="/services" className="text-secondary" style={{ fontWeight: 600 }}>Schedule a lender closing call →</Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Who We Are / Mission Section */}
-      <section className="section-padding" style={{ backgroundColor: 'white' }}>
-        <div className="container">
-          <div className="grid grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
+      <section className="section-padding" style={{ backgroundColor: '#F8FAFC' }}>
+        <div className="container" style={{ maxWidth: '1440px' }}>
+          <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', alignItems: 'center', gap: '5rem' }}>
             <motion.div {...fadeIn}>
               <h2 className="badge" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>Who We Are</h2>
-              <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Your Partners in Protection</h3>
-              <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-                Based in Raleigh, NC, KM Title Insurance is a specialized firm helping homeowners, buyers, lenders, and real estate professionals close with confidence by eliminating title risks before they become costly problems.
+              <h3 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Elite Service for Raleigh and Beyond</h3>
+              <p style={{ fontSize: '1.15rem', color: 'var(--muted)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
+                Ideal for agents and lenders who want proactive communication, fast curative work, and on-time closings in multiple states. From our headquarters in Raleigh, we support the entire Research Triangle—including <span style={{ fontWeight: 700 }}>Cary, Durham, Chapel Hill, and Apex</span>—with deep local expertise and nationwide capability.
               </p>
-              <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '2rem' }}>
-                Serving clients across North Carolina and nationwide, we act as the ideal partner for real estate agents, attorneys, and lenders who want reliable title support and proactive communication on every deal.
-              </p>
-              <div style={{ padding: '2rem', borderLeft: '4px solid var(--secondary)', background: '#F8FAFC' }}>
-                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Our Mission</h4>
-                <p style={{ color: 'var(--muted)' }}>To deliver clear title, on time, so closings never get delayed and your investment stays protected.</p>
+              <div style={{ display: 'flex', gap: '2rem', marginBottom: '2.5rem' }}>
+                <div style={{ padding: '1.5rem', background: 'white', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', flex: 1 }}>
+                  <p style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>72hr</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', fontWeight: 600 }}>Typical Curative Turnaround</p>
+                </div>
+                <div style={{ padding: '1.5rem', background: 'white', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', flex: 1 }}>
+                  <p style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>Multi-State</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', fontWeight: 600 }}>Licensed Experts</p>
+                </div>
+              </div>
+              <div style={{ padding: '2rem', borderLeft: '4px solid var(--secondary)', background: 'white', boxShadow: 'var(--shadow-sm)' }}>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Case Study: Raleigh, NC</h4>
+                <p style={{ color: 'var(--muted)', fontStyle: 'italic' }}>"Cleared a complex lien issue in 72 hours so a local buyer could close on time."</p>
               </div>
             </motion.div>
             <motion.div
@@ -361,20 +385,20 @@ const Home = () => {
       </section>
 
       {/* How It Works (Process) */}
-      <section className="section-padding">
+      <section className="section-padding" style={{ background: 'white' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+            <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>The Process</span>
             <h2 style={{ fontSize: '3rem', marginBottom: '1.25rem' }}>How It Works</h2>
             <p style={{ color: 'var(--muted)', fontSize: '1.25rem', marginBottom: '1rem' }}>A simple 5-step process that takes you from title search to confident closing.</p>
-            <p style={{ color: 'var(--secondary)', fontWeight: 600 }}>Most title searches and preliminary reports are completed within 3–5 business days.</p>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', flexWrap: 'wrap', gap: '2.5rem' }}>
             {[
-              { title: "Order Title Search", icon: <FileText />, desc: "Share your property and transaction details in a simple online form." },
-              { title: "We Examine Records", icon: <Search />, desc: "We review deeds, liens, and public records to spot risks early." },
-              { title: "Resolve Any Issues", icon: <Shield />, desc: "We clear any liens or ownership disputes before closing day." },
-              { title: "Issue Policy", icon: <Award />, desc: "We issue your title insurance policy for long-term protection." },
-              { title: "Close with Confidence", icon: <CheckCircle />, desc: "You finalize your transaction knowing your ownership is protected." }
+              { step: "Step 01", title: "Order Title Search", icon: <FileText />, desc: "Share your property and transaction details in a simple online form." },
+              { step: "Step 02", title: "We Examine Records", icon: <Search />, desc: "Our experts review deeds, liens, and public records to spot risks early." },
+              { step: "Step 03", title: "Resolve Any Issues", icon: <Shield />, desc: "We clear any liens or ownership disputes before closing day." },
+              { step: "Step 04", title: "Issue Policy", icon: <Award />, desc: "We issue your title insurance policy for long-term protection." },
+              { step: "Step 05", title: "Close with Confidence", desc: "You finalize your transaction knowing your ownership is protected." }
             ].map((step, i) => (
               <motion.div
                 key={i}
@@ -392,10 +416,11 @@ const Home = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   boxShadow: '0 8px 20px rgba(237, 122, 28, 0.3)',
-                  margin: '0 auto 2rem'
+                  margin: '0 auto 1.5rem'
                 }}>
-                  {React.cloneElement(step.icon, { size: 32 })}
+                  {step.icon ? React.cloneElement(step.icon, { size: 32 }) : <CheckCircle size={32} />}
                 </div>
+                <p style={{ fontWeight: 800, color: 'var(--secondary)', fontSize: '0.85rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>{step.step}</p>
                 <h4 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>{step.title}</h4>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>{step.desc}</p>
               </motion.div>
@@ -404,18 +429,61 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding" style={{ background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
-        <div className="container">
-          <motion.div {...fadeIn}>
-            <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Ready to Secure Your Property?</h2>
-            <p style={{ fontSize: '1.25rem', color: '#94a3b8', marginBottom: '2.5rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
-              Whether you are a buyer, agent, or lender, we provide the expert title insurance services you need to close with confidence.
-            </p>
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.2rem' }}>
-              Request a Free Title Quote
-            </Link>
-          </motion.div>
+      {/* CTA Section with Lead Form */}
+      <section className="section-padding" style={{ background: 'var(--primary)', color: 'white' }}>
+        <div className="container" style={{ maxWidth: '1200px' }}>
+          <div className="grid grid-cols-2" style={{ alignItems: 'center', gap: '5rem' }}>
+            <motion.div {...fadeIn}>
+              <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Ready to Secure Your Property?</h2>
+              <p style={{ fontSize: '1.2rem', color: '#94a3b8', marginBottom: '2.5rem', lineHeight: 1.6 }}>
+                Whether you are a buyer, agent, or lender, KM Title provides the expert title services you need to close with confidence in Raleigh or nationwide.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(237, 122, 28, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <CheckCircle size={20} className="text-secondary" />
+                  </div>
+                  <p style={{ fontWeight: 600 }}>Fast & Accurate Curative Work</p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(237, 122, 28, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <CheckCircle size={20} className="text-secondary" />
+                  </div>
+                  <p style={{ fontWeight: 600 }}>Multi-State Closing Expertise</p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(237, 122, 28, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <CheckCircle size={20} className="text-secondary" />
+                  </div>
+                  <p style={{ fontWeight: 600 }}>Transparent E-Signature Ready Process</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div {...fadeIn} style={{ background: 'white', padding: '3rem', borderRadius: '1.5rem', boxShadow: 'var(--shadow-xl)' }}>
+              <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>Inquire for a Free Quote</h3>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <input type="text" placeholder="Full Name" style={inputStyle} required />
+                  <input type="email" placeholder="Email Address" style={inputStyle} required />
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <input type="tel" placeholder="Phone Number" style={inputStyle} required />
+                  <select style={inputStyle} required>
+                    <option value="">I am a...</option>
+                    <option value="Homebuyer">Homebuyer</option>
+                    <option value="Agent">Real Estate Agent</option>
+                    <option value="Lender">Lender</option>
+                    <option value="Attorney">Attorney</option>
+                  </select>
+                </div>
+                <input type="text" placeholder="Property State (e.g., NC, SC, GA)" style={inputStyle} required />
+                <button type="submit" className="btn btn-primary" style={{ padding: '1rem', marginTop: '0.5rem' }}>
+                  Request Quote Now
+                </button>
+              </form>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -423,26 +491,29 @@ const Home = () => {
       <section style={{ padding: '8rem 0', background: '#F8FAFC' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Common Questions</h2>
-            <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Expert answers to the most common title insurance inquiries for owners, agents, and lenders.</p>
+            <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>Education</span>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Understanding Title Insurance</h2>
+            <p style={{ color: 'var(--muted)', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
+              Expert answers to common title insurance inquiries. A one-time premium that protects you for as long as you own the property.
+            </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
-              {
-                q: "Do I need owner's title insurance if I'm buying cash?",
-                a: "Yes. Even if you don't have a lender requiring a policy, owner's title insurance is vital to protect your cash investment from hidden risks like forgery or unknown heirs that a title search might miss."
+              { 
+                q: "Do I need owner's title insurance if the lender has a policy?", 
+                a: "Yes. A lender's policy only protects the bank's mortgage interest, which decreases as you pay it down. Only an owner's policy protects your full equity and covers your legal defense costs in the event of a title challenge."
               },
-              {
-                q: "What does a title search include?",
-                a: "A comprehensive title search includes a review of public records relating to the property's history, including deeds, mortgages, tax liens, judgments, and easements to ensure clear ownership."
+              { 
+                q: "How much does title insurance cost in North Carolina?", 
+                a: "In NC, title insurance rates are set by the state. The premium is typically based on the property’s purchase price and is a one-time fee paid at closing that provides protection for as long as you own the home."
               },
-              {
-                q: "Can you work directly with my real estate agent and lender?",
-                a: "Yes, we regularly coordinate with agents, lenders, and attorneys to keep all parties aligned and closings on schedule. We are multi-state experts capable of handling complex coordinate needs."
+              { 
+                q: "What is the difference between lender’s and owner’s title insurance?", 
+                a: "Lender's insurance covers the outstanding loan balance for the bank. Owner's insurance covers the homeowner's full purchase price and equity. Both are crucial for comprehensive protection during a real estate transaction."
               },
-              {
-                q: "How long does it take to get title insurance?",
-                a: "Most title searches and preliminary reports are completed within 3–5 business days. Complex properties or multi-state transactions may take longer depending on record availability."
+              { 
+                q: "Do I need owner's title insurance if I'm buying cash?", 
+                a: "Yes. Even without a lender, you are risking your entire cash investment. Title insurance protects you from hidden risks like forgery, unknown heirs, or old unpaid tax bills that could threaten your right to the property."
               }
             ].map((faq, idx) => (
               <div key={idx} style={{ border: '1px solid var(--border)', borderRadius: '12px', background: 'white', overflow: 'hidden' }}>
