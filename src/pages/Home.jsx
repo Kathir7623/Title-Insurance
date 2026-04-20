@@ -201,7 +201,7 @@ const Home = () => {
               If you are buying, refinancing, or investing, title insurance protects you from past issues that could threaten your ownership later.
             </p>
           </div>
-          
+
           <p style={{ textAlign: 'center', color: '#cbd5e1', marginBottom: '2rem', fontSize: '1.1rem' }}>
             Here are some common issues title insurance helps protect against:
           </p>
@@ -253,20 +253,20 @@ const Home = () => {
             </h3>
             <div className="grid grid-cols-3">
               {[
-                { 
-                  icon: <Shield />, 
-                  title: "Owner’s Title Insurance", 
-                  desc: "Ideal for buyers and homeowners who want lifetime protection from hidden title issues." 
+                {
+                  icon: <Shield />,
+                  title: "Owner’s Title Insurance",
+                  desc: "Ideal for buyers and homeowners who want lifetime protection from hidden title issues."
                 },
-                { 
-                  icon: <Search />, 
-                  title: "Title Search & Examination", 
-                  desc: "Helps buyers and agents avoid surprises and ownership defects before closing day." 
+                {
+                  icon: <Search />,
+                  title: "Title Search & Examination",
+                  desc: "Helps buyers and agents avoid surprises and ownership defects before closing day."
                 },
-                { 
-                  icon: <Users />, 
-                  title: "Escrow & Closing Support", 
-                  desc: "Secure, neutral handling of earnest money and legal docs to protect all parties." 
+                {
+                  icon: <Users />,
+                  title: "Escrow & Closing Support",
+                  desc: "Secure, neutral handling of earnest money and legal docs to protect all parties."
                 }
               ].map((s, i) => (
                 <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="card">
@@ -290,20 +290,20 @@ const Home = () => {
             </h3>
             <div className="grid grid-cols-3">
               {[
-                { 
-                  icon: <Lock />, 
-                  title: "Lender’s Title Insurance", 
-                  desc: "Gives your lender confidence that their mortgage is secured by a clear title." 
+                {
+                  icon: <Lock />,
+                  title: "Lender’s Title Insurance",
+                  desc: "Gives your lender confidence that their mortgage is secured by a clear title."
                 },
-                { 
-                  icon: <FileText />, 
-                  title: "Title Settlement Services", 
-                  desc: "We coordinate documents, recording, and funds so closing day is smooth and on-time." 
+                {
+                  icon: <FileText />,
+                  title: "Title Settlement Services",
+                  desc: "We coordinate documents, recording, and funds so closing day is smooth and on-time."
                 },
-                { 
-                  icon: <Search />, 
-                  title: "Commercial Title Services", 
-                  desc: "Specialized support for complex commercial property acquisitions and multi-state deals." 
+                {
+                  icon: <Search />,
+                  title: "Commercial Title Services",
+                  desc: "Specialized support for complex commercial property acquisitions and multi-state deals."
                 }
               ].map((s, i) => (
                 <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="card">
@@ -325,12 +325,12 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="section-padding" style={{ background: '#F8FAFC' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '3rem', marginBottom: '1.25rem' }}>Why Choose KM Title?</h2>
             <p style={{ color: 'var(--muted)', fontSize: '1.25rem' }}>Choose a title partner that keeps your transaction moving and keeps you informed at every step.</p>
           </div>
 
-          <div className="grid grid-cols-2" style={{ gap: '3rem', marginBottom: '6rem' }}>
+          <div className="grid grid-cols-2" style={{ gap: '3rem' }}>
             {[
               { title: "Fast & Accurate Title Search", benefit: "Quick turnarounds so your closing doesn't get delayed." },
               { title: "100% Transparent Process", benefit: "Clear communication at every step, with no hidden fees." },
@@ -351,31 +351,7 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2" style={{ gap: '2rem' }}>
-            {[
-              { 
-                text: "“Smooth and hassle-free closing process. Their communication was miles ahead of other companies we've used in the past.”",
-                author: "Residential Agent",
-                location: "Raleigh, NC"
-              },
-              { 
-                text: "“As a first-time buyer, I was nervous about title risks. KM Title explained everything and protected my investment.”",
-                author: "First‑Time Homebuyer",
-                location: "Purchase in Raleigh, NC"
-              }
-            ].map((t, idx) => (
-              <motion.div key={idx} {...fadeIn} style={{ padding: '3rem', background: 'white', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)', textAlign: 'left', borderTop: '4px solid var(--secondary)' }}>
-                <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem' }}>
-                  {[1, 2, 3, 4, 5].map(i => <Star key={i} fill="var(--secondary)" color="var(--secondary)" size={18} />)}
-                </div>
-                <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: 1.6, color: 'var(--primary-light)' }}>{t.text}</p>
-                <div>
-                  <p style={{ fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>{t.author}</p>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>{t.location}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+
         </div>
       </section>
 
@@ -447,25 +423,25 @@ const Home = () => {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
-              { 
-                q: "Do I need owner's title insurance if I'm buying cash?", 
+              {
+                q: "Do I need owner's title insurance if I'm buying cash?",
                 a: "Yes. Even if you don't have a lender requiring a policy, owner's title insurance is vital to protect your cash investment from hidden risks like forgery or unknown heirs that a title search might miss."
               },
-              { 
-                q: "What does a title search include?", 
+              {
+                q: "What does a title search include?",
                 a: "A comprehensive title search includes a review of public records relating to the property's history, including deeds, mortgages, tax liens, judgments, and easements to ensure clear ownership."
               },
-              { 
-                q: "Can you work directly with my real estate agent and lender?", 
+              {
+                q: "Can you work directly with my real estate agent and lender?",
                 a: "Yes, we regularly coordinate with agents, lenders, and attorneys to keep all parties aligned and closings on schedule. We are multi-state experts capable of handling complex coordinate needs."
               },
-              { 
-                q: "How long does it take to get title insurance?", 
+              {
+                q: "How long does it take to get title insurance?",
                 a: "Most title searches and preliminary reports are completed within 3–5 business days. Complex properties or multi-state transactions may take longer depending on record availability."
               }
             ].map((faq, idx) => (
               <div key={idx} style={{ border: '1px solid var(--border)', borderRadius: '12px', background: 'white', overflow: 'hidden' }}>
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   style={{ width: '100%', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer' }}
                 >
@@ -492,7 +468,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .hero-container {
           padding-top: 20px;
         }

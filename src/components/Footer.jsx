@@ -27,7 +27,7 @@ const Footer = () => {
               <li><Link to="/services" style={{ color: '#94a3b8' }}>Our Services</Link></li>
               <li><Link to="/why-title-insurance" style={{ color: '#94a3b8' }}>Why Title Insurance?</Link></li>
               <li><Link to="/contact" style={{ color: '#94a3b8' }}>Contact</Link></li>
-              <li><Link to="/privacy" style={{ color: '#94a3b8' }}>Privacy Policy</Link></li>
+              {/* <li><Link to="/privacy" style={{ color: '#94a3b8' }}>Privacy Policy</Link></li> */}
             </ul>
           </div>
 
