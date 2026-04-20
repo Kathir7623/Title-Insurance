@@ -59,8 +59,6 @@ const Home = () => {
     { step: "05", title: "Close with Confidence", desc: "Finalize your transaction worry-free." }
   ];
 
-  const [openFaq, setOpenFaq] = useState(null);
-
   const heroBadge = {
     background: 'rgba(237, 122, 28, 0.15)',
     color: 'var(--secondary)',
@@ -75,6 +73,11 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <SEO 
+        title="Trusted Title Insurance Raleigh NC & Nationwide"
+        description="Expert title insurance services protecting homeowners and lenders in North Carolina and across the USA. Fast title search and secure closings."
+        keywords="title insurance Raleigh NC, title insurance North Carolina, residential title insurance, commercial title insurance USA, real estate closing support"
+      />
       {/* Hero Section */}
       <section className="hero" style={{
         position: 'relative',
