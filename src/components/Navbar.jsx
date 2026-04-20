@@ -29,6 +29,8 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  return (
+    <>
       {/* Top Bar */}
       <div style={{ background: '#0f172a', borderBottom: '1px solid #1e293b', padding: '0.5rem 0', display: 'flex', justifyContent: 'center' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', color: '#94a3b8' }}>
