@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Search, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import ownersImg from '../assets/owners.png';
 import lendersImg from '../assets/lenders.png';
 import searchImg from '../assets/search.png';
@@ -72,6 +73,11 @@ const Services = () => {
 
   return (
     <div className="services-page">
+      <SEO 
+        title="Our Title Insurance Services"
+        description="Comprehensive title insurance solutions for residential and commercial transactions. Owner's policies, lender's policies, and settlement services."
+        keywords="residential title insurance, commercial title insurance, settlement services, title search North Carolina, lender policies"
+      />
       {/* Page Header */}
       <section style={{ padding: '120px 0 60px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
         <div className="container">

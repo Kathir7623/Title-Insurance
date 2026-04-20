@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, Shield, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const fadeIn = {
@@ -11,8 +12,22 @@ const Contact = () => {
     transition: { duration: 0.6 }
   };
 
+  const inputStyle = {
+    width: '100%',
+    padding: '1rem',
+    borderRadius: '0.75rem',
+    border: '1px solid #e2e8f0',
+    fontSize: '1rem',
+    outline: 'none'
+  };
+
   return (
     <div className="contact-page">
+      <SEO 
+        title="Contact Us | Request a Free Title Quote"
+        description="Ready to secure your property? Contact KM Title Insurance today for a free title quote or to discuss your upcoming real estate closing."
+        keywords="contact title company Raleigh, title quote request, real estate closing support"
+      />
       {/* Page Header */}
       <section style={{ padding: '120px 0 60px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
         <div className="container">

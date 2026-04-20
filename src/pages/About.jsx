@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Shield, Target, Eye, Award } from 'lucide-react';
+import SEO from '../components/SEO';
 import aboutImg from '../assets/about-img.png';
 
 const About = () => {
@@ -13,6 +14,11 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <SEO 
+        title="About Our Title Experts"
+        description="Meet the dedicated team at KM Title Insurance. With decades of experience in real estate law and title examination, we ensure your property is protected."
+        keywords="KM Title Insurance team, real estate title experts, title insurance professionals, Raleigh NC title company"
+      />
       {/* Page Header */}
       <section style={{ padding: '120px 0 60px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
         <div className="container">

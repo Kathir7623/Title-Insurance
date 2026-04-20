@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Search, FileText, Lock, Users, ChevronRight, CheckCircle, Star, ArrowRight, ChevronDown, Award, Clock } from 'lucide-react';
+import SEO from '../components/SEO';
 import heroImg from '../assets/hero.png';
 
 const Home = () => {
+  const [openFaq, setOpenFaq] = useState(null);
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },

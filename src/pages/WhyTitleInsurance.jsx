@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle, AlertTriangle, FileText, Search, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 import investmentImg from '../assets/investment.png';
 
@@ -24,6 +25,11 @@ const WhyTitleInsurance = () => {
 
   return (
     <div className="why-insurance-page">
+      <SEO 
+        title="Why You Need Title Insurance | Property Protection"
+        description="Understand the critical importance of title insurance in protecting your home from hidden past-title risks like liens, forgery, and undiscovered heirs."
+        keywords="importance of title insurance, why title insurance, title risk protection, homeowner protection"
+      />
       {/* Page Header */}
       <section style={{ padding: '120px 0 60px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
         <div className="container">
