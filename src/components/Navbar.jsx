@@ -52,7 +52,7 @@ const Navbar = () => {
         }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Serving Raleigh, NC, the Research Triangle, and clients nationwide.</span>
+              <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Serving Raleigh, NC and nationwide title insurance needs for buyers, sellers, investors, and lenders.</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem' }}>
                 <Phone size={14} className="text-secondary" />
                 <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(470) 706-5858</a>

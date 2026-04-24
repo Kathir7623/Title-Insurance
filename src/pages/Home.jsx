@@ -82,20 +82,20 @@ const Home = () => {
               transition={{ duration: 0.8 }}
             >
               <div style={heroBadge}>Experienced Title Professionals</div>
-              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-                Title Insurance & Closing Services <br className="desktop-only" />
-                <span className="text-secondary">You Can Count On</span>
+              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+                Title Insurance Specialists <br className="desktop-only" />
+                <span className="text-secondary">in Raleigh, NC</span>
               </h1>
               <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: 1.6 }}>
-                Protect your next closing with experienced title professionals who deliver fast curative work, clear communication, and on-time closings in Raleigh and across multiple states.
+                Protect your property with expert title insurance that guards against unknown liens, ownership disputes, fraud, and record errors—so you can close with confidence today and stay protected for years.
               </p>
               
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
                 <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem' }}>
-                  Get a Free Title Quote
+                  Get a Free Title Insurance Quote
                 </Link>
                 <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                  Learn Why Title Insurance Matters <ArrowRight size={20} />
+                  Why You Need Title Insurance <ArrowRight size={20} />
                 </Link>
               </div>
 
@@ -111,7 +111,7 @@ const Home = () => {
                 maxWidth: '750px'
               }}>
                 <Award size={18} className="text-secondary" />
-                <span>Licensed in NC - ALTA Member - Supporting buyers, sellers, investors, and lenders nationwide.</span>
+                <span>Licensed in NC - ALTA Member - Protecting homeowners, buyers, and lenders nationwide.</span>
               </div>
             </motion.div>
           </div>
