@@ -51,6 +51,7 @@ const Home = () => {
         height: '100vh',
         display: 'flex',
         alignItems: 'center',
+        paddingTop: '200px',
         overflow: 'hidden',
         background: 'var(--primary)'
       }}>

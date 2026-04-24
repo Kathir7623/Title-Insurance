@@ -28,7 +28,7 @@ const Contact = () => {
         keywords="contact title company Raleigh, title quote request, real estate closing support"
       />
       {/* Page Header */}
-      <section style={{ padding: '120px 0 60px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
+      <section style={{ padding: '200px 0 100px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
         <div className="container">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}

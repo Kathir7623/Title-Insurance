@@ -31,61 +31,97 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <div style={{ background: '#0f172a', borderBottom: '1px solid #1e293b', padding: '0.5rem 0', display: 'flex', justifyContent: 'center' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', color: '#94a3b8' }}>
-          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-            <span style={{ color: 'var(--secondary)', fontWeight: 600 }}>Serving NC and Nationwide</span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Phone size={14} className="text-secondary" />
-              <a href="tel:4707065858" style={{ color: '#94a3b8', textDecoration: 'none' }}>(470) 706-5858</a>
+      <header style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        right: 0, 
+        zIndex: 1000,
+        transition: 'all 0.3s ease'
+      }}>
+        {/* Top Bar */}
+        <div style={{ 
+          background: scrolled ? 'transparent' : '#0f172a', 
+          borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.1)', 
+          padding: scrolled ? '0' : '0.6rem 0', 
+          height: scrolled ? '0' : 'auto',
+          overflow: 'hidden',
+          transition: 'all 0.3s ease',
+          display: 'flex', 
+          justifyContent: 'center' 
+        }}>
+          <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+              <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Serving NC and Nationwide</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem' }}>
+                <Phone size={14} className="text-secondary" />
+                <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(470) 706-5858</a>
+              </div>
+            </div>
+            <div className="desktop-only">
+               <Link to="/contact" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                 Get a Quote <span style={{ color: 'var(--secondary)' }}>→</span>
+               </Link>
             </div>
           </div>
-          <div className="desktop-only">
-             <Link to="/contact" style={{ color: 'white', fontWeight: 600, textDecoration: 'none' }}>Get a Quote →</Link>
-          </div>
         </div>
-      </div>
 
-      <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`}>
-        <div className="container nav-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '110px', transition: 'height 0.3s ease' }}>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={logo} alt="KM Title Insurance" className="nav-logo" style={{ height: '90px', objectFit: 'contain', transition: 'height 0.3s ease' }} />
-          </Link>
-
-          {/* Desktop Nav */}
-          <div className="desktop-menu" style={{ gap: '1.5rem', alignItems: 'center' }}>
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                to={link.path} 
+        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ position: 'relative', border: 'none' }}>
+          <div className="container nav-container" style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center', 
+            height: scrolled ? '80px' : '100px', 
+            transition: 'all 0.3s ease' 
+          }}>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+              <img 
+                src={logo} 
+                alt="KM Title Insurance" 
+                className="nav-logo" 
                 style={{ 
-                  fontWeight: 600, 
-                  fontSize: '0.95rem',
-                  color: location.pathname === link.path ? 'var(--secondary)' : 'white',
-                  position: 'relative'
-                }}
-                className="nav-link"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '0.6rem 1.4rem', fontSize: '0.9rem' }}>
-              Request a Free Quote
+                  height: scrolled ? '60px' : '75px', 
+                  objectFit: 'contain', 
+                  transition: 'all 0.3s ease' 
+                }} 
+              />
             </Link>
-          </div>
 
-          {/* Mobile Toggle Group */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <a href="tel:4707065858" className="mobile-only" style={{ color: 'white' }}>
-              <Phone size={24} />
-            </a>
-            <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: 'white', padding: '0.5rem', border: 'none', background: 'none' }}>
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            {/* Desktop Nav */}
+            <div className="desktop-menu" style={{ gap: '2rem', alignItems: 'center' }}>
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name} 
+                  to={link.path} 
+                  style={{ 
+                    fontWeight: 700, 
+                    fontSize: '0.9rem',
+                    color: location.pathname === link.path ? 'var(--secondary)' : 'white',
+                    position: 'relative',
+                    letterSpacing: '0.01em'
+                  }}
+                  className="nav-link"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Link to="/contact" className="btn btn-primary" style={{ padding: '0.75rem 1.6rem', fontSize: '0.9rem', marginLeft: '0.5rem' }}>
+                Request a Free Quote
+              </Link>
+            </div>
+
+            {/* Mobile Toggle Group */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+              <a href="tel:4707065858" className="mobile-only" style={{ color: 'white' }}>
+                <Phone size={22} />
+              </a>
+              <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} style={{ color: 'white', padding: '0.5rem', border: 'none', background: 'none' }}>
+                {isOpen ? <X size={30} /> : <Menu size={30} />}
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Mobile Menu Drawer */}
       <motion.div 
@@ -142,7 +178,6 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      {/* Mobile Overlay */}
       {isOpen && (
         <div 
           onClick={() => setIsOpen(false)}
