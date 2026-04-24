@@ -82,21 +82,36 @@ const Home = () => {
               transition={{ duration: 0.8 }}
             >
               <div style={heroBadge}>Experienced Title Professionals</div>
-              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.2rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 Title Insurance & Closing Services <br className="desktop-only" />
-                <span className="text-secondary">in Raleigh, NC and Nationwide.</span>
+                <span className="text-secondary">You Can Count On</span>
               </h1>
-              <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.6 }}>
-                Serving Raleigh, NC and nationwide title insurance needs for buyers, sellers, investors, and lenders. We provide the expert protection your investment deserves.
+              <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: 1.6 }}>
+                Protect your next closing with experienced title professionals who deliver fast curative work, clear communication, and on-time closings in Raleigh and across multiple states.
               </p>
               
-              <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
                 <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem' }}>
-                  Request a Free Title Quote
+                  Get a Free Title Quote
                 </Link>
                 <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                  Why Title Insurance? <ArrowRight size={20} />
+                  Learn Why Title Insurance Matters <ArrowRight size={20} />
                 </Link>
+              </div>
+
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.75rem', 
+                color: 'rgba(255,255,255,0.6)', 
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                borderTop: '1px solid rgba(255,255,255,0.1)',
+                paddingTop: '1.5rem',
+                maxWidth: '750px'
+              }}>
+                <Award size={18} className="text-secondary" />
+                <span>Licensed in NC - ALTA Member - Supporting buyers, sellers, investors, and lenders nationwide.</span>
               </div>
             </motion.div>
           </div>
