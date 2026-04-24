@@ -26,17 +26,6 @@ const Home = () => {
     backgroundColor: '#F8FAFC'
   };
 
-  const heroBadge = {
-    background: 'rgba(237, 122, 28, 0.15)',
-    color: 'var(--secondary)',
-    padding: '0.5rem 1rem',
-    borderRadius: '2rem',
-    fontSize: '0.9rem',
-    fontWeight: 600,
-    border: '1px solid var(--secondary)',
-    display: 'inline-block',
-    marginBottom: '1rem'
-  };
 
   return (
     <div className="home-page">
@@ -82,13 +71,12 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div style={heroBadge}>Experienced Title Professionals</div>
               <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 Title Insurance Specialists <br className="desktop-only" />
                 <span className="text-secondary">in Raleigh, NC</span>
               </h1>
               <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: 1.6 }}>
-                Protect your property with expert title insurance that guards against unknown liens, ownership disputes, fraud, and record errors—so you can close with confidence today and stay protected for years.
+                Protect your property with expert title insurance that guards against hidden liens, ownership claims, and fraud—so you can close with confidence today.
               </p>
               
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
