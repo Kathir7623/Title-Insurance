@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, Shield, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -258,18 +257,6 @@ const Contact = () => {
       `}} />
     </div>
   );
-};
-
-const inputStyle = {
-  padding: '1rem 1.25rem',
-  borderRadius: '12px',
-  border: '1px solid var(--border)',
-  fontSize: '1rem',
-  fontFamily: 'var(--font-sans)',
-  outline: 'none',
-  transition: 'all 0.3s ease',
-  width: '100%',
-  backgroundColor: '#F8FAFC'
 };
 
 export default Contact;

@@ -14,50 +14,17 @@ const Home = () => {
     transition: { duration: 0.6 }
   };
 
-  const services = [
-    {
-      icon: <Shield className="text-secondary" size={32} />,
-      title: "Owner’s Title Insurance",
-      desc: "Protects homeowners from title defects and legal claims."
-    },
-    {
-      icon: <Lock className="text-secondary" size={32} />,
-      title: "Lender’s Title Insurance",
-      desc: "Ensures the lender’s investment is protected during mortgage transactions."
-    },
-    {
-      icon: <Search className="text-secondary" size={32} />,
-      title: "Title Search & Examination",
-      desc: "We thoroughly review public records to identify any issues before closing."
-    },
-    {
-      icon: <FileText className="text-secondary" size={32} />,
-      title: "Title Settlement Services",
-      desc: "Smooth and secure closing process for buyers, sellers, and agents."
-    },
-    {
-      icon: <Shield className="text-secondary" size={32} />,
-      title: "Escrow Services",
-      desc: "Safe handling of funds and documents during transactions."
-    }
-  ];
-
-  const features = [
-    "Fast & Accurate Title Search",
-    "100% Transparent Process",
-    "Nationwide Coverage",
-    "Experienced Professionals",
-    "Secure Transactions",
-    "Dedicated Customer Support"
-  ];
-
-  const steps = [
-    { step: "01", title: "Order Title Search", desc: "Start the process with a simple request." },
-    { step: "02", title: "We Examine Records", desc: "Our experts dive deep into public records." },
-    { step: "03", title: "Resolve Any Issues", desc: "We clear any liens or ownership disputes." },
-    { step: "04", title: "Issue Policy", desc: "Formal protection for your property ownership." },
-    { step: "05", title: "Close with Confidence", desc: "Finalize your transaction worry-free." }
-  ];
+  const inputStyle = {
+    padding: '1rem 1.25rem',
+    borderRadius: '12px',
+    border: '1px solid var(--border)',
+    fontSize: '1rem',
+    fontFamily: 'var(--font-sans)',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+    width: '100%',
+    backgroundColor: '#F8FAFC'
+  };
 
   const heroBadge = {
     background: 'rgba(237, 122, 28, 0.15)',
