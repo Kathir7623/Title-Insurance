@@ -14,9 +14,6 @@ const Footer = () => {
             <p style={{ color: '#94a3b8', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
               Trusted US-based Title Insurance company dedicated to protecting homeowners, buyers, and lenders from potential title risks.
             </p>
-            <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: 600 }}>
-              Serving Raleigh, NC and clients nationwide.
-            </p>
           </div>
 
           <div>
@@ -60,10 +57,6 @@ const Footer = () => {
                 Mon–Fri: 9 AM–5 PM EST
               </li>
             </ul>
-            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <div style={{ padding: '0.5rem 1rem', border: '1px solid #334155', borderRadius: '4px', fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>Licensed in NC</div>
-              <div style={{ padding: '0.5rem 1rem', border: '1px solid #334155', borderRadius: '4px', fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>ALTA Member</div>
-            </div>
           </div>
         </div>
 
