@@ -105,11 +105,6 @@ button {
 
 .glass-nav.scrolled .nav-link {
   color: white !important;
-  opacity: 1 !important;
-}
-
-.nav-link.active:after {
-  width: 100%;
 }
 
 .glass-nav.scrolled .btn-primary {

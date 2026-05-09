@@ -37,23 +37,20 @@ const Navbar = () => {
         left: 0, 
         right: 0, 
         zIndex: 1000,
-        background: scrolled ? 'var(--secondary)' : 'transparent',
-        boxShadow: scrolled ? 'var(--shadow-lg)' : 'none',
-        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+        transition: 'all 0.3s ease'
       }}>
         {/* Top Bar */}
         <div style={{ 
-          background: scrolled ? 'var(--secondary)' : '#0f172a', 
+          background: scrolled ? 'transparent' : '#0f172a', 
           borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.1)', 
           padding: scrolled ? '0' : '0.6rem 0', 
           height: scrolled ? '0' : 'auto',
-          opacity: scrolled ? 0 : 1,
           overflow: 'hidden',
-          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          transition: 'all 0.3s ease',
           display: 'flex', 
           justifyContent: 'center' 
         }}>
-          <div className="top-bar-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '0 4rem' }}>
+          <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Serving Raleigh, NC and nationwide title insurance needs for buyers, sellers, investors, and lenders.</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem' }}>
@@ -69,21 +66,13 @@ const Navbar = () => {
           </div>
         </div>
 
-        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ 
-          position: 'relative', 
-          border: 'none',
-          background: 'transparent',
-          boxShadow: 'none',
-          backdropFilter: 'none'
-        }}>
-          <div className="nav-container" style={{ 
+        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ position: 'relative', border: 'none' }}>
+          <div className="container nav-container" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'center', 
             height: scrolled ? '80px' : '100px', 
-            transition: 'all 0.3s ease',
-            width: '100%',
-            padding: '0 4rem'
+            transition: 'all 0.3s ease' 
           }}>
             <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
               <img 
@@ -107,12 +96,11 @@ const Navbar = () => {
                   style={{ 
                     fontWeight: 700, 
                     fontSize: '0.9rem',
-                    color: scrolled ? 'white' : (location.pathname === link.path ? 'var(--secondary)' : 'white'),
+                    color: location.pathname === link.path ? 'var(--secondary)' : 'white',
                     position: 'relative',
-                    letterSpacing: '0.01em',
-                    opacity: scrolled ? 1 : (location.pathname === link.path ? 1 : 0.9)
+                    letterSpacing: '0.01em'
                   }}
-                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                  className="nav-link"
                 >
                   {link.name}
                 </Link>
@@ -229,22 +217,14 @@ const Navbar = () => {
         @media (max-width: 768px) {
           .desktop-menu { display: none !important; }
           .mobile-toggle { display: block !important; }
-          .nav-container, .top-bar-container { 
-            height: 75px !important; 
-            padding: 0 1.5rem !important;
-          }
-          .top-bar-container { height: auto !important; }
+          .nav-container { height: 75px !important; }
           .nav-logo { height: 50px !important; }
           .desktop-only { display: none !important; }
           .mobile-only { display: block !important; }
         }
         
         @media (max-width: 480px) {
-          .nav-container, .top-bar-container { 
-            height: 65px !important; 
-            padding: 0 1rem !important;
-          }
-          .top-bar-container { height: auto !important; }
+          .nav-container { height: 65px !important; }
           .nav-logo { height: 40px !important; }
         }
       `}} />
