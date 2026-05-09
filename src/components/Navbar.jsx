@@ -37,16 +37,19 @@ const Navbar = () => {
         left: 0, 
         right: 0, 
         zIndex: 1000,
-        transition: 'all 0.3s ease'
+        background: scrolled ? 'var(--secondary)' : 'transparent',
+        boxShadow: scrolled ? 'var(--shadow-lg)' : 'none',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
       }}>
         {/* Top Bar */}
         <div style={{ 
-          background: scrolled ? 'transparent' : '#0f172a', 
+          background: scrolled ? 'var(--secondary)' : '#0f172a', 
           borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.1)', 
           padding: scrolled ? '0' : '0.6rem 0', 
           height: scrolled ? '0' : 'auto',
+          opacity: scrolled ? 0 : 1,
           overflow: 'hidden',
-          transition: 'all 0.3s ease',
+          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           display: 'flex', 
           justifyContent: 'center' 
         }}>
@@ -66,7 +69,13 @@ const Navbar = () => {
           </div>
         </div>
 
-        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ position: 'relative', border: 'none' }}>
+        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ 
+          position: 'relative', 
+          border: 'none',
+          background: 'transparent',
+          boxShadow: 'none',
+          backdropFilter: 'none'
+        }}>
           <div className="nav-container" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
@@ -98,11 +107,12 @@ const Navbar = () => {
                   style={{ 
                     fontWeight: 700, 
                     fontSize: '0.9rem',
-                    color: location.pathname === link.path ? 'var(--secondary)' : 'white',
+                    color: scrolled ? 'white' : (location.pathname === link.path ? 'var(--secondary)' : 'white'),
                     position: 'relative',
-                    letterSpacing: '0.01em'
+                    letterSpacing: '0.01em',
+                    opacity: scrolled ? 1 : (location.pathname === link.path ? 1 : 0.9)
                   }}
-                  className="nav-link"
+                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
                 >
                   {link.name}
                 </Link>
