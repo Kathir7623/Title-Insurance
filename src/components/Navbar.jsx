@@ -50,7 +50,7 @@ const Navbar = () => {
           display: 'flex', 
           justifyContent: 'center' 
         }}>
-          <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+          <div className="top-bar-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '0 4rem' }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Serving Raleigh, NC and nationwide title insurance needs for buyers, sellers, investors, and lenders.</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem' }}>
@@ -67,12 +67,14 @@ const Navbar = () => {
         </div>
 
         <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ position: 'relative', border: 'none' }}>
-          <div className="container nav-container" style={{ 
+          <div className="nav-container" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'center', 
             height: scrolled ? '80px' : '100px', 
-            transition: 'all 0.3s ease' 
+            transition: 'all 0.3s ease',
+            width: '100%',
+            padding: '0 4rem'
           }}>
             <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
               <img 
@@ -217,14 +219,22 @@ const Navbar = () => {
         @media (max-width: 768px) {
           .desktop-menu { display: none !important; }
           .mobile-toggle { display: block !important; }
-          .nav-container { height: 75px !important; }
+          .nav-container, .top-bar-container { 
+            height: 75px !important; 
+            padding: 0 1.5rem !important;
+          }
+          .top-bar-container { height: auto !important; }
           .nav-logo { height: 50px !important; }
           .desktop-only { display: none !important; }
           .mobile-only { display: block !important; }
         }
         
         @media (max-width: 480px) {
-          .nav-container { height: 65px !important; }
+          .nav-container, .top-bar-container { 
+            height: 65px !important; 
+            padding: 0 1rem !important;
+          }
+          .top-bar-container { height: auto !important; }
           .nav-logo { height: 40px !important; }
         }
       `}} />
