@@ -58,7 +58,8 @@ const Navbar = () => {
             justifyContent: 'space-between', 
             alignItems: 'center', 
             height: scrolled ? '80px' : '100px', 
-            transition: 'all 0.3s ease' 
+            transition: 'all 0.3s ease',
+            paddingRight: '0' 
           }}>
             <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
               <img 
@@ -97,7 +98,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Toggle Group */}
-            <div className="mobile-group" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <div className="mobile-group" style={{ alignItems: 'center', gap: '1.25rem' }}>
               <a href="tel:4707065858" className="mobile-only" style={{ color: 'white' }}>
                 <Phone size={22} />
               </a>
