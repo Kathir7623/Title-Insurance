@@ -64,8 +64,8 @@ const Home = () => {
             zIndex: 0
           }}
         />
-        <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>
-          <div style={{ maxWidth: '850px' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white', width: '100%' }}>
+          <div style={{ maxWidth: '850px', textAlign: 'left' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
