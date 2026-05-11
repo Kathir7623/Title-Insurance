@@ -150,7 +150,7 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div {...fadeIn} style={{ background: 'white', padding: '3.5rem', borderRadius: '2.5rem', boxShadow: 'var(--shadow-xl)', border: '1px solid var(--border)' }}>
+            <motion.div {...fadeIn} className="contact-form-container" style={{ background: 'white', padding: '3.5rem', borderRadius: '2.5rem', boxShadow: 'var(--shadow-xl)', border: '1px solid var(--border)' }}>
               <div style={{ marginBottom: '2.5rem' }}>
                 <h3 style={{ fontSize: '1.85rem', marginBottom: '0.75rem' }}>Contact Us</h3>
                 <p style={{ color: 'var(--muted)' }}>Complete the form below to start your title search or request information.</p>
@@ -234,7 +234,7 @@ const Contact = () => {
             grid-template-columns: 1fr !important;
             gap: 1.75rem !important;
           }
-          .contact-page .motion-div {
+          .contact-page .contact-form-container {
             padding: 2rem !important;
           }
         }

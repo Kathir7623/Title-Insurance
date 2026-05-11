@@ -52,8 +52,8 @@ const Navbar = () => {
         }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Providing statewide title insurance across North Carolina and nationwide for buyers, sellers, investors, and lenders.</span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }}>
+              <span className="desktop-only" style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Providing statewide title insurance across North Carolina and nationwide for buyers, sellers, investors, and lenders.</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }} className="top-bar-contacts">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Phone size={14} className="text-secondary" />
                   <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(470) 706-5858</a>
@@ -227,9 +227,12 @@ const Navbar = () => {
           .nav-logo { height: 50px !important; }
           .desktop-only { display: none !important; }
           .mobile-only { display: block !important; }
+          .top-bar-contacts { width: 100%; justify-content: space-between; }
         }
         
         @media (max-width: 480px) {
+          .top-bar-contacts { flex-direction: column; gap: 0.4rem !important; align-items: flex-start !important; }
+          .top-bar-contacts div { font-size: 0.75rem; }
           .nav-container { height: 65px !important; }
           .nav-logo { height: 40px !important; }
         }

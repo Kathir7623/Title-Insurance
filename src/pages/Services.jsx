@@ -110,7 +110,7 @@ const Services = () => {
       {/* Services List */}
       <section className="section-padding">
         <div className="container">
-          <div className="grid grid-cols-1" style={{ gap: '8rem' }}>
+          <div className="grid grid-cols-1 services-grid" style={{ gap: '8rem' }}>
             {servicesDetailed.map((service, i) => (
               <motion.div
                 key={i}
@@ -243,7 +243,8 @@ const Services = () => {
           .services-page h2 { font-size: 2rem !important; }
           .services-page .section-padding { padding: 4rem 0 !important; }
           .services-page ul { grid-template-columns: 1fr !important; gap: 1rem !important; }
-          .service-row { gap: 2rem !important; }
+          .services-grid { gap: 4rem !important; }
+          .service-row { gap: 3rem !important; }
           .service-image-container { height: 300px !important; }
           
           /* Non-scrollable Stacked Table */

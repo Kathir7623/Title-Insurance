@@ -432,7 +432,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            <motion.div {...fadeIn} style={{ background: 'white', padding: '3rem', borderRadius: '1.5rem', boxShadow: 'var(--shadow-xl)' }}>
+            <motion.div {...fadeIn} className="home-form-container" style={{ background: 'white', padding: '3rem', borderRadius: '1.5rem', boxShadow: 'var(--shadow-xl)' }}>
               <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>Contact Our Team</h3>
               <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
@@ -552,6 +552,7 @@ const Home = () => {
             grid-template-columns: 1fr !important;
           }
           
+          .home-form-container { padding: 2rem !important; }
           .home-page .section-padding { padding: 3rem 0 !important; }
         }
       `}} />
