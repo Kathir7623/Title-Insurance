@@ -65,17 +65,17 @@ const Navbar = () => {
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
               <span className="desktop-only" style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Providing statewide title insurance across North Carolina and nationwide for buyers, sellers, investors, and lenders.</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }} className="top-bar-contacts">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Phone size={14} className="text-secondary" />
-                  <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 700, whiteSpace: 'nowrap' }}>OFFICE: (470) 706-5858</a>
+                  <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>OFFICE: (470) 706-5858</a>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Phone size={14} className="text-secondary" />
-                  <a href="tel:9842558817" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 700, whiteSpace: 'nowrap' }}>MOBILE: (984) 255-8817</a>
+                  <a href="tel:9842558817" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>MOBILE: (984) 255-8817</a>
                 </div>
               </div>
             </div>
-            <div className="desktop-only" style={{ display: 'none' }}>
+            <div className="desktop-only">
                <Link to="/contact" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                  Contact Us <span style={{ color: 'var(--secondary)' }}>→</span>
                </Link>
@@ -227,12 +227,6 @@ const Navbar = () => {
         .desktop-only { display: block; }
         .mobile-only { display: none; }
         
-        @media (max-width: 1280px) {
-          .desktop-only { font-size: 0.75rem !important; }
-          .top-bar-contacts { gap: 1rem !important; }
-          .top-bar-contacts div a { font-size: 0.75rem !important; }
-        }
-
         @media (max-width: 991px) {
           .desktop-menu { gap: 1rem; }
           .nav-link { font-size: 0.85rem; }

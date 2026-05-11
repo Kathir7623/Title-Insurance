@@ -64,41 +64,23 @@ const Home = () => {
             zIndex: 0
           }}
         />
-        <div className="container" style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <div style={{ maxWidth: '1000px' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, color: 'white' }}>
+          <div style={{ maxWidth: '850px' }}>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)', marginBottom: '2rem' }}>
-                <span style={{ marginRight: '0.5rem' }}>🏆</span> Trusted statewide title coverage
-              </div>
-              
-              <h1 style={{ 
-                fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', 
-                lineHeight: 1.1, 
-                marginBottom: '2rem',
-                fontWeight: 800,
-                letterSpacing: '-0.02em'
-              }}>
+              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 Title Insurance Specialists <br className="desktop-only" />
-                <span style={{ color: 'var(--secondary)' }}>Across North Carolina</span>
+                <span className="text-secondary">Across North Carolina</span>
               </h1>
-              
-              <p style={{ 
-                fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', 
-                color: '#e2e8f0', 
-                marginBottom: '3rem', 
-                maxWidth: '800px',
-                margin: '0 auto 3rem',
-                lineHeight: 1.6
-              }}>
+              <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: 1.6 }}>
                 Protect your property with expert title insurance that guards against hidden liens, ownership claims, and fraud—so you can close with confidence today.
               </p>
               
-              <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }} className="hero-btns">
-                <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.1rem' }}>
+              <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }} className="hero-btns">
+                <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem' }}>
                   Contact Our Team
                 </Link>
                 <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }} className="secondary-link">
@@ -109,16 +91,13 @@ const Home = () => {
               <div style={{ 
                 display: 'flex', 
                 alignItems: 'center', 
-                gap: '1rem', 
-                color: '#94a3b8', 
+                gap: '0.75rem', 
+                color: 'rgba(255,255,255,0.6)', 
                 fontSize: '0.9rem',
-                justifyContent: 'center',
-                background: 'rgba(15, 23, 42, 0.5)',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '99px',
-                border: '1px solid rgba(255,255,255,0.1)',
-                width: 'fit-content',
-                margin: '0 auto'
+                fontWeight: 600,
+                borderTop: '1px solid rgba(255,255,255,0.1)',
+                paddingTop: '1.5rem',
+                maxWidth: '750px'
               }}>
                 <Award size={18} className="text-secondary" />
                 <span>Licensed in NC - ALTA Member - Protecting homeowners, buyers, and lenders nationwide.</span>
