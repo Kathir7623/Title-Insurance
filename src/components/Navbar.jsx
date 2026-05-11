@@ -52,7 +52,7 @@ const Navbar = () => {
       }}>
         {/* Top Bar Removed */}
 
-        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ position: 'relative', border: 'none' }}>
+        <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ width: '100%', border: 'none' }}>
           <div className="container nav-container" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
