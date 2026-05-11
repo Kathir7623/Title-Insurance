@@ -37,11 +37,11 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero" style={{
         position: 'relative',
-        minHeight: '700px',
+        minHeight: '650px',
         display: 'flex',
-        alignItems: 'center',
-        paddingTop: '160px',
-        paddingBottom: '80px',
+        alignItems: 'flex-start',
+        paddingTop: '130px',
+        paddingBottom: '60px',
         overflow: 'hidden',
         background: 'var(--primary)'
       }}>
