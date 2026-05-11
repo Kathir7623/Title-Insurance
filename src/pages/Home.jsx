@@ -73,7 +73,7 @@ const Home = () => {
             >
               <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 Title Insurance Specialists <br className="desktop-only" />
-                <span className="text-secondary">Across North Carolina</span>
+                <span style={{ color: 'var(--secondary)' }}>Across North Carolina</span>
               </h1>
               <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: 1.6 }}>
                 Protect your property with expert title insurance that guards against hidden liens, ownership claims, and fraud—so you can close with confidence today.
