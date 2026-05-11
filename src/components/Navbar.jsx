@@ -97,7 +97,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Toggle Group */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <div className="mobile-group" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
               <a href="tel:4707065858" className="mobile-only" style={{ color: 'white' }}>
                 <Phone size={22} />
               </a>
@@ -208,13 +208,16 @@ const Navbar = () => {
           .nav-logo { height: 50px !important; }
           .desktop-only { display: none !important; }
           .mobile-only { display: block !important; }
+          .mobile-group { display: flex !important; }
           .top-bar-contacts { width: 100%; justify-content: space-between; }
         }
         
         @media (max-width: 480px) {
           .nav-container { height: 65px !important; }
           .nav-logo { height: 40px !important; }
+          .mobile-group { display: flex !important; }
         }
+        .mobile-group { display: none; }
       `}} />
     </>
   );
