@@ -74,11 +74,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="desktop-only">
-               <Link to="/contact" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                 Contact Us <span style={{ color: 'var(--secondary)' }}>→</span>
-               </Link>
-            </div>
+            {/* Removed top bar contact link */}
           </div>
         </div>
 
