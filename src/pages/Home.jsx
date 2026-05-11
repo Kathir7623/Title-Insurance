@@ -136,14 +136,14 @@ const Home = () => {
       {/* Who We Are / Mission Section */}
       <section className="section-padding" style={{ backgroundColor: '#F8FAFC' }}>
         <div className="container" style={{ maxWidth: '1440px' }}>
-          <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', alignItems: 'center', gap: '5rem' }}>
+          <div className="grid who-we-are-grid" style={{ gridTemplateColumns: '1fr 1fr', alignItems: 'center', gap: '5rem' }}>
             <motion.div {...fadeIn}>
               <h2 className="badge" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>Who We Are</h2>
-              <h3 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Elite Service Across North Carolina</h3>
+              <h3 className="who-we-are-title" style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Elite Service Across North Carolina</h3>
               <p style={{ fontSize: '1.15rem', color: 'var(--muted)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
                 Ideal for agents and lenders who want proactive communication, fast curative work, and on-time closings in multiple states. We provide comprehensive title coverage throughout North Carolina—serving all 100 counties—with deep local expertise and nationwide capability.
               </p>
-              <div style={{ display: 'flex', gap: '2rem', marginBottom: '2.5rem' }}>
+              <div className="stats-container" style={{ display: 'flex', gap: '2rem', marginBottom: '2.5rem' }}>
                 <div style={{ padding: '1.5rem', background: 'white', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', flex: 1 }}>
                   <p style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.25rem' }}>72hr</p>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', fontWeight: 600 }}>Typical Curative Turnaround</p>
@@ -160,6 +160,7 @@ const Home = () => {
             </motion.div>
             <motion.div
               {...fadeIn}
+              className="who-we-are-image-container"
               style={{ position: 'relative' }}
             >
               <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="Professional real estate consultation session" style={{ borderRadius: 'var(--radius)', width: '100%', boxShadow: 'var(--shadow-lg)' }} />
@@ -554,6 +555,15 @@ const Home = () => {
           .hero-btns { flex-direction: column; align-items: stretch !important; gap: 1rem !important; }
           .hero-btns .btn { width: 100%; justify-content: center; }
           .secondary-link { justify-content: center; padding: 0.5rem; }
+          .who-we-are-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .who-we-are-title { font-size: 2.2rem !important; }
+          .stats-container { gap: 1rem !important; }
+          .stats-container div { padding: 1rem !important; }
+          .stats-container p:first-child { font-size: 1.5rem !important; }
+          .who-we-are-image-container { margin-top: 2rem; }
+          .exp-box { position: relative !important; bottom: 0 !important; right: 0 !important; max-width: 100% !important; margin-top: 1.5rem; gap: 1rem !important; padding: 1.5rem !important; }
+          .exp-box div p { font-size: 0.95rem !important; }
+          
           .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
           .home-form-container { padding: 2rem !important; }
           .home-page .section-padding { padding: 3rem 0 !important; }
