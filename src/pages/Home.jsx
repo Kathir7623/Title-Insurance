@@ -79,12 +79,12 @@ const Home = () => {
                 Protect your property with expert title insurance that guards against hidden liens, ownership claims, and fraud—so you can close with confidence today.
               </p>
               
-              <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }} className="hero-btns">
                 <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem' }}>
                   Contact Our Team
                 </Link>
-                <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                  Why You Need Title Insurance <ArrowRight size={20} />
+                <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }} className="secondary-link">
+                  Why KM Title? <ArrowRight size={20} />
                 </Link>
               </div>
 
@@ -435,11 +435,11 @@ const Home = () => {
             <motion.div {...fadeIn} className="home-form-container" style={{ background: 'white', padding: '3rem', borderRadius: '1.5rem', boxShadow: 'var(--shadow-xl)' }}>
               <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>Contact Our Team</h3>
               <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <input type="text" placeholder="Full Name" style={inputStyle} required />
                   <input type="email" placeholder="Email Address" style={inputStyle} required />
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <input type="tel" placeholder="Phone Number" style={inputStyle} required />
                   <select style={inputStyle} required>
                     <option value="">I am a...</option>
@@ -551,7 +551,10 @@ const Home = () => {
           .grid-cols-2, .grid-cols-3, .grid-cols-4 {
             grid-template-columns: 1fr !important;
           }
-          
+          .hero-btns { flex-direction: column; align-items: stretch !important; gap: 1rem !important; }
+          .hero-btns .btn { width: 100%; justify-content: center; }
+          .secondary-link { justify-content: center; padding: 0.5rem; }
+          .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
           .home-form-container { padding: 2rem !important; }
           .home-page .section-padding { padding: 3rem 0 !important; }
         }

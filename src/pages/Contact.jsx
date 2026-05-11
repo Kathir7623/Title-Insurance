@@ -157,7 +157,7 @@ const Contact = () => {
               </div>
               
               <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Full Name <span style={{ color: 'var(--secondary)' }}>*</span></label>
                     <input type="text" placeholder="John Doe" style={inputStyle} required />
@@ -167,7 +167,7 @@ const Contact = () => {
                     <input type="email" placeholder="john@example.com" style={inputStyle} required />
                   </div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                <div className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary-light)' }}>Who are you? <span style={{ color: 'var(--secondary)' }}>*</span></label>
                     <select style={inputStyle} required>
@@ -230,9 +230,9 @@ const Contact = () => {
         @media (max-width: 768px) {
           .contact-page h1 { font-size: 2.5rem !important; }
           .contact-page .section-padding { padding: 4rem 0 !important; }
-          .contact-page form > div {
+          .contact-page .form-grid {
             grid-template-columns: 1fr !important;
-            gap: 1.75rem !important;
+            gap: 1.5rem !important;
           }
           .contact-page .contact-form-container {
             padding: 2rem !important;

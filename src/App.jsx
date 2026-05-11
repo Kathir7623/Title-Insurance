@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -26,35 +26,45 @@ function App() {
           </main>
           <Footer />
           
-          {/* Floating Action Button */}
-          <Link 
-            to="/contact" 
-            className="fab"
-            style={{
-              position: 'fixed',
-              bottom: '2rem',
-              right: '2rem',
-              background: 'var(--secondary)',
-              color: 'white',
-              width: '160px',
-              height: '56px',
-              borderRadius: '28px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: 800,
-              boxShadow: '0 10px 25px rgba(237, 122, 28, 0.4)',
-              zIndex: 1000,
-              textDecoration: 'none',
-              fontSize: '0.95rem'
-            }}
-          >
-            Contact Us →
-          </Link>
+          {/* Floating Action Button - Hidden on Contact page */}
+          <FloatingFAB />
         </div>
       </Router>
     </HelmetProvider>
   );
 }
+
+const FloatingFAB = () => {
+  const location = useLocation();
+  if (location.pathname === '/contact') return null;
+
+  return (
+    <Link 
+      to="/contact" 
+      className="fab"
+      style={{
+        position: 'fixed',
+        bottom: '2rem',
+        right: '2rem',
+        background: 'var(--secondary)',
+        color: 'white',
+        width: 'auto',
+        padding: '0 1.5rem',
+        height: '56px',
+        borderRadius: '28px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontWeight: 800,
+        boxShadow: '0 10px 25px rgba(237, 122, 28, 0.4)',
+        zIndex: 1000,
+        textDecoration: 'none',
+        fontSize: '0.95rem'
+      }}
+    >
+      Contact Us →
+    </Link>
+  );
+};
 
 export default App;

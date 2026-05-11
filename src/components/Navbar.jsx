@@ -56,11 +56,11 @@ const Navbar = () => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }} className="top-bar-contacts">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Phone size={14} className="text-secondary" />
-                  <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(470) 706-5858</a>
+                  <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>OFFICE: (470) 706-5858</a>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Phone size={14} className="text-secondary" />
-                  <a href="tel:9842558817" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(984) 255-8817</a>
+                  <a href="tel:9842558817" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>MOBILE: (984) 255-8817</a>
                 </div>
               </div>
             </div>
@@ -231,8 +231,8 @@ const Navbar = () => {
         }
         
         @media (max-width: 480px) {
-          .top-bar-contacts { flex-direction: column; gap: 0.4rem !important; align-items: flex-start !important; }
-          .top-bar-contacts div { font-size: 0.75rem; }
+          .top-bar-contacts { flex-direction: column; gap: 0.5rem !important; align-items: flex-start !important; padding: 0.5rem 0; }
+          .top-bar-contacts div { font-size: 0.75rem; border-left: 2px solid var(--secondary); padding-left: 0.75rem; }
           .nav-container { height: 65px !important; }
           .nav-logo { height: 40px !important; }
         }
