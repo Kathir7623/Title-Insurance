@@ -21,6 +21,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -147,7 +158,8 @@ const Navbar = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: '2.5rem',
-          visibility: isOpen ? 'visible' : 'hidden'
+          visibility: isOpen ? 'visible' : 'hidden',
+          overflowY: 'auto'
         }}
         className="mobile-drawer"
       >
