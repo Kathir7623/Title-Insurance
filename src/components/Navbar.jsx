@@ -74,7 +74,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="desktop-menu" style={{ gap: '2rem', alignItems: 'center' }}>
+            <div className="desktop-menu" style={{ gap: '4rem', alignItems: 'center' }}>
               {navLinks.map((link) => (
                 <Link 
                   key={link.name} 
