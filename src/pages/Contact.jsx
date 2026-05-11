@@ -228,6 +228,7 @@ const Contact = () => {
           }
         }
         @media (max-width: 768px) {
+          .contact-page section:first-of-type { padding: 180px 0 60px !important; }
           .contact-page h1 { font-size: 2.5rem !important; }
           .contact-page .section-padding { padding: 4rem 0 !important; }
           .contact-page .form-grid {

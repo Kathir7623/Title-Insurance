@@ -528,7 +528,7 @@ const Home = () => {
         @media (max-width: 768px) {
           .hero {
             height: auto !important;
-            padding: 140px 0 100px !important;
+            padding: 180px 0 100px !important;
             align-items: flex-start !important;
           }
           .hero h1 { font-size: 2.5rem !important; }

@@ -239,6 +239,7 @@ const Services = () => {
           .service-row img { height: 100% !important; }
         }
         @media (max-width: 768px) {
+          .services-page section:first-of-type { padding: 180px 0 60px !important; }
           .services-page h1 { font-size: 2.5rem !important; }
           .services-page h2 { font-size: 2rem !important; }
           .services-page .section-padding { padding: 4rem 0 !important; }

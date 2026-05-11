@@ -202,6 +202,7 @@ const About = () => {
           }
         }
         @media (max-width: 768px) {
+          .about-page section:first-of-type { padding: 180px 0 60px !important; }
           .about-page h1 { font-size: 2.5rem !important; }
           .about-page h2 { font-size: 2rem !important; }
           .about-page .section-padding { padding: 4rem 0 !important; }

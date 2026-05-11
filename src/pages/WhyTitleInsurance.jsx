@@ -243,6 +243,7 @@ const WhyTitleInsurance = () => {
           .why-insurance-page .grid[grid-cols-2] { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 768px) {
+          .why-insurance-page section:first-of-type { padding: 180px 0 60px !important; }
           .why-insurance-page h1 { font-size: 2.5rem !important; }
           .why-insurance-page h2 { font-size: 2rem !important; }
           .why-insurance-page .section-padding { padding: 4rem 0 !important; }
