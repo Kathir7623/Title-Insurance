@@ -63,7 +63,6 @@ const Navbar = () => {
         }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <span className="desktop-only" style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Providing statewide title insurance across North Carolina and nationwide for buyers, sellers, investors, and lenders.</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }} className="top-bar-contacts">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <Phone size={14} className="text-secondary" />
