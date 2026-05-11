@@ -23,9 +23,9 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <SEO 
-        title="Contact Us | Request a Free Title Quote"
-        description="Ready to secure your property? Contact KM Title Insurance today for a free title quote or to discuss your upcoming real estate closing."
-        keywords="contact title company Raleigh, title quote request, real estate closing support"
+        title="Contact Us | Secure Your Property"
+        description="Ready to secure your property? Contact KM Title Insurance today for closing services or to discuss your upcoming real estate closing."
+        keywords="contact title company North Carolina, title service request, real estate closing support"
       />
       {/* Page Header */}
       <section style={{ padding: '200px 0 100px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
@@ -67,25 +67,7 @@ const Contact = () => {
               </p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
-                  <div style={{
-                    width: '50px',
-                    height: '50px',
-                    background: 'rgba(237, 122, 28, 0.1)',
-                    color: 'var(--secondary)',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0
-                  }}>
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Location</h4>
-                    <p style={{ color: 'var(--muted)' }}>1428 Bailey's Run Ct, Raleigh, NC 27606</p>
-                  </div>
-                </div>
+
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
                   <div style={{
                     width: '50px',
@@ -122,9 +104,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Phone</h4>
-                    <a href="tel:+14707065858" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '1.1rem', textDecoration: 'none' }}>
-                      (470) 706-5858
-                    </a>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                      <a href="tel:+14707065858" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '1.1rem', textDecoration: 'none' }}>
+                        (470) 706-5858
+                      </a>
+                      <a href="tel:+19842558817" style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '1.1rem', textDecoration: 'none' }}>
+                        (984) 255-8817
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
@@ -164,8 +151,8 @@ const Contact = () => {
             {/* Contact Form */}
             <motion.div {...fadeIn} style={{ background: 'white', padding: '3.5rem', borderRadius: '2.5rem', boxShadow: 'var(--shadow-xl)', border: '1px solid var(--border)' }}>
               <div style={{ marginBottom: '2.5rem' }}>
-                <h3 style={{ fontSize: '1.85rem', marginBottom: '0.75rem' }}>Request a Free Title Quote</h3>
-                <p style={{ color: 'var(--muted)' }}>Complete the form below to start your title search or request a quote.</p>
+                <h3 style={{ fontSize: '1.85rem', marginBottom: '0.75rem' }}>Contact Us</h3>
+                <p style={{ color: 'var(--muted)' }}>Complete the form below to start your title search or request information.</p>
               </div>
               
               <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
@@ -224,7 +211,7 @@ const Contact = () => {
               
               <div style={{ marginTop: '2.5rem', padding: '1rem', background: 'rgba(237, 122, 28, 0.05)', borderRadius: '1rem', textAlign: 'center' }}>
                 <p style={{ fontSize: '0.85rem', color: 'var(--secondary)', fontWeight: 600 }}>
-                  We’ll review your information and follow up with an initial quote within 24 hours.
+                  We’ll review your information and follow up with a response within 24 hours.
                 </p>
               </div>
             </motion.div>

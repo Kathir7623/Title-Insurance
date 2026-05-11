@@ -30,9 +30,9 @@ const Home = () => {
   return (
     <div className="home-page">
       <SEO 
-        title="Title Insurance & Closing Services Raleigh NC | KM Title Insurance"
-        description="Elite title insurance and closing services in Raleigh, NC and nationwide. Protecting buyers, sellers, investors, and lenders with fast, secure property protection."
-        keywords="title insurance Raleigh NC, title insurance North Carolina, real estate closing Raleigh, title search Raleigh, US title insurance"
+        title="Title Insurance & Closing Services | Full North Carolina Coverage"
+        description="Elite title insurance and closing services throughout North Carolina and nationwide. Protecting buyers, sellers, investors, and lenders with fast, secure property protection."
+        keywords="title insurance North Carolina, real estate closing NC, title search North Carolina, US title insurance"
       />
       {/* Hero Section */}
       <section className="hero" style={{
@@ -73,7 +73,7 @@ const Home = () => {
             >
               <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 Title Insurance Specialists <br className="desktop-only" />
-                <span className="text-secondary">in Raleigh, NC</span>
+                <span className="text-secondary">Across North Carolina</span>
               </h1>
               <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: 1.6 }}>
                 Protect your property with expert title insurance that guards against hidden liens, ownership claims, and fraud—so you can close with confidence today.
@@ -81,7 +81,7 @@ const Home = () => {
               
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
                 <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem' }}>
-                  Get a Free Title Insurance Quote
+                  Contact Our Team
                 </Link>
                 <Link to="/why-title-insurance" style={{ color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                   Why You Need Title Insurance <ArrowRight size={20} />
@@ -115,7 +115,7 @@ const Home = () => {
               <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>For Homebuyers & Owners</span>
               <h3 style={{ marginBottom: '1rem' }}>Secure Your Dream Home</h3>
               <p style={{ color: 'var(--muted)', marginBottom: '1.5rem' }}>Ideal for buyers who want lifetime protection from hidden title issues and past risks.</p>
-              <Link to="/services" className="text-secondary" style={{ fontWeight: 600 }}>Get your owner’s title quote →</Link>
+              <Link to="/services" className="text-secondary" style={{ fontWeight: 600 }}>Protect your ownership →</Link>
             </motion.div>
             <motion.div {...fadeIn} transition={{ delay: 0.1 }} style={{ textAlign: 'left' }}>
               <span className="badge" style={{ background: 'rgba(237, 122, 28, 0.1)', color: 'var(--secondary)', marginBottom: '1rem' }}>For Real Estate Agents & Attorneys</span>
@@ -139,9 +139,9 @@ const Home = () => {
           <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', alignItems: 'center', gap: '5rem' }}>
             <motion.div {...fadeIn}>
               <h2 className="badge" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>Who We Are</h2>
-              <h3 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Elite Service for Raleigh and Beyond</h3>
+              <h3 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Elite Service Across North Carolina</h3>
               <p style={{ fontSize: '1.15rem', color: 'var(--muted)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-                Ideal for agents and lenders who want proactive communication, fast curative work, and on-time closings in multiple states. From our headquarters in Raleigh, we support the entire Research Triangle—including <span style={{ fontWeight: 700 }}>Cary, Durham, Chapel Hill, and Apex</span>—with deep local expertise and nationwide capability.
+                Ideal for agents and lenders who want proactive communication, fast curative work, and on-time closings in multiple states. We provide comprehensive title coverage throughout North Carolina—serving all 100 counties—with deep local expertise and nationwide capability.
               </p>
               <div style={{ display: 'flex', gap: '2rem', marginBottom: '2.5rem' }}>
                 <div style={{ padding: '1.5rem', background: 'white', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', flex: 1 }}>
@@ -154,7 +154,7 @@ const Home = () => {
                 </div>
               </div>
               <div style={{ padding: '2rem', borderLeft: '4px solid var(--secondary)', background: 'white', boxShadow: 'var(--shadow-sm)' }}>
-                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Case Study: Raleigh, NC</h4>
+                <h4 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Case Study: North Carolina</h4>
                 <p style={{ color: 'var(--muted)', fontStyle: 'italic' }}>"Cleared a complex lien issue in 72 hours so a local buyer could close on time."</p>
               </div>
             </motion.div>
@@ -277,7 +277,7 @@ const Home = () => {
                   <h4 style={{ marginBottom: '0.75rem', fontSize: '1.35rem' }}>{s.title}</h4>
                   <p style={{ color: 'var(--muted)', fontSize: '0.95rem', minHeight: '3rem' }}>{s.desc}</p>
                   <Link to="/contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontWeight: 600 }}>
-                    Request a Quote <ArrowRight size={16} />
+                    Contact Us <ArrowRight size={16} />
                   </Link>
                 </motion.div>
               ))}
@@ -314,7 +314,7 @@ const Home = () => {
                   <h4 style={{ marginBottom: '0.75rem', fontSize: '1.35rem' }}>{s.title}</h4>
                   <p style={{ color: 'var(--muted)', fontSize: '0.95rem', minHeight: '3rem' }}>{s.desc}</p>
                   <Link to="/contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontWeight: 600 }}>
-                    Request a Quote <ArrowRight size={16} />
+                    Contact Us <ArrowRight size={16} />
                   </Link>
                 </motion.div>
               ))}
@@ -408,7 +408,7 @@ const Home = () => {
             <motion.div {...fadeIn}>
               <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Ready to Secure Your Property?</h2>
               <p style={{ fontSize: '1.2rem', color: '#94a3b8', marginBottom: '2.5rem', lineHeight: 1.6 }}>
-                Whether you are a buyer, agent, or lender, KM Title provides the expert title services you need to close with confidence in Raleigh or nationwide.
+                Whether you are a buyer, agent, or lender, KM Title provides the expert title services you need to close with confidence throughout North Carolina or nationwide.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
@@ -433,7 +433,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div {...fadeIn} style={{ background: 'white', padding: '3rem', borderRadius: '1.5rem', boxShadow: 'var(--shadow-xl)' }}>
-              <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>Inquire for a Free Quote</h3>
+              <h3 style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>Contact Our Team</h3>
               <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <input type="text" placeholder="Full Name" style={inputStyle} required />
@@ -451,7 +451,7 @@ const Home = () => {
                 </div>
                 <input type="text" placeholder="Property State (e.g., NC, SC, GA)" style={inputStyle} required />
                 <button type="submit" className="btn btn-primary" style={{ padding: '1rem', marginTop: '0.5rem' }}>
-                  Request Quote Now
+                  Submit Inquiry
                 </button>
               </form>
             </motion.div>

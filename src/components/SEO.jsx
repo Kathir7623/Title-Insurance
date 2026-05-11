@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const SEO = ({ title, description, keywords, canonical, schemaData }) => {
   const siteTitle = "KM Title Insurance";
   const defaultDescription = "Trusted Title Insurance services in North Carolina and Nationwide. Protecting homeowners, buyers, and lenders with fast, accurate, and professional title searches.";
-  const defaultKeywords = "title insurance Raleigh NC, title insurance North Carolina, residential title insurance, commercial title insurance USA, real estate closing support, title search services";
+  const defaultKeywords = "title insurance North Carolina, title insurance NC, residential title insurance, commercial title insurance USA, real estate closing support, title search services";
   
   const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Secure Your Property Future`;
   const metaDescription = description || defaultDescription;
@@ -21,17 +21,10 @@ const SEO = ({ title, description, keywords, canonical, schemaData }) => {
     "telephone": "+14707065858",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Raleigh",
-      "addressLocality": "Raleigh",
       "addressRegion": "NC",
-      "postalCode": "27601",
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 35.7796,
-      "longitude": -78.6382
-    },
+
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [

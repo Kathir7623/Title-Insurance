@@ -41,17 +41,17 @@ const Footer = () => {
           <div>
             <h4 style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>Contact Info</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
-                <MapPin size={20} style={{ color: 'var(--secondary)' }} />
-                <span>1428 Bailey's Run Ct, Raleigh, NC 27606</span>
-              </li>
+
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <Mail size={20} style={{ color: 'var(--secondary)' }} />
                 <a href="mailto:support@kmtitleinsurance.com" style={{ color: '#94a3b8', textDecoration: 'none' }}>support@kmtitleinsurance.com</a>
               </li>
               <li style={{ display: 'flex', gap: '0.75rem', color: '#94a3b8' }}>
                 <Phone size={20} style={{ color: 'var(--secondary)' }} />
-                <a href="tel:4707065858" style={{ color: '#94a3b8', textDecoration: 'none' }}>(470) 706-5858</a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <a href="tel:4707065858" style={{ color: '#94a3b8', textDecoration: 'none' }}>(470) 706-5858</a>
+                  <a href="tel:9842558817" style={{ color: '#94a3b8', textDecoration: 'none' }}>(984) 255-8817</a>
+                </div>
               </li>
               <li style={{ fontSize: '0.85rem', color: 'var(--secondary)', paddingLeft: '2.75rem' }}>
                 Mon–Fri: 9 AM–5 PM EST

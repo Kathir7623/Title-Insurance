@@ -49,7 +49,7 @@ function App() {
               fontSize: '0.95rem'
             }}
           >
-            Get a Quote →
+            Contact Us →
           </Link>
         </div>
       </Router>

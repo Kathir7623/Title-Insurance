@@ -17,7 +17,7 @@ const About = () => {
       <SEO 
         title="About Our Title Experts"
         description="Meet the dedicated team at KM Title Insurance. With decades of experience in real estate law and title examination, we ensure your property is protected."
-        keywords="KM Title Insurance team, real estate title experts, title insurance professionals, Raleigh NC title company"
+        keywords="KM Title Insurance team, real estate title experts, title insurance professionals, North Carolina title company"
       />
       {/* Page Header */}
       <section style={{ padding: '200px 0 100px', background: 'var(--primary)', color: 'white', textAlign: 'center' }}>
@@ -35,7 +35,7 @@ const About = () => {
             transition={{ delay: 0.2 }}
             style={{ color: '#94a3b8', fontSize: '1.25rem' }}
           >
-            Based in Raleigh, NC — Serving Clients Nationwide
+            Serving Full North Carolina — Nationwide Support
           </motion.p>
         </div>
       </section>
@@ -47,7 +47,7 @@ const About = () => {
             <motion.div {...fadeIn}>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Protecting Your Investment</h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-                KM Title Insurance is a US-based title company supporting buyers, homeowners, lenders, and real estate professionals with clear, accurate title work for smooth, on-time closings. Based in Raleigh, North Carolina, we provide title insurance services across NC and support clients with nationwide real estate transactions.
+                KM Title Insurance is a US-based title company supporting buyers, homeowners, lenders, and real estate professionals with clear, accurate title work for smooth, on-time closings. Serving all of North Carolina, we provide title insurance services across the state and support clients with nationwide real estate transactions.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 Buying a home or investing in property is one of the biggest decisions you will make. Our job is to remove title surprises so your closing stays on track. Our experienced team supports residential and investment property transactions of all sizes, helping our clients close with confidence.

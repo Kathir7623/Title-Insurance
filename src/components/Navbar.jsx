@@ -52,15 +52,21 @@ const Navbar = () => {
         }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Serving Raleigh, NC and nationwide title insurance needs for buyers, sellers, investors, and lenders.</span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem' }}>
-                <Phone size={14} className="text-secondary" />
-                <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(470) 706-5858</a>
+              <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.02em' }}>Providing statewide title insurance across North Carolina and nationwide for buyers, sellers, investors, and lenders.</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <Phone size={14} className="text-secondary" />
+                  <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(470) 706-5858</a>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <Phone size={14} className="text-secondary" />
+                  <a href="tel:9842558817" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 500 }}>(984) 255-8817</a>
+                </div>
               </div>
             </div>
             <div className="desktop-only">
                <Link to="/contact" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                 Get a Quote <span style={{ color: 'var(--secondary)' }}>→</span>
+                 Contact Us <span style={{ color: 'var(--secondary)' }}>→</span>
                </Link>
             </div>
           </div>
@@ -106,7 +112,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/contact" className="btn btn-primary" style={{ padding: '0.75rem 1.6rem', fontSize: '0.9rem', marginLeft: '0.5rem' }}>
-                Request a Free Quote
+                Contact Us
               </Link>
             </div>
 
@@ -169,7 +175,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-outline" style={{ marginTop: '1rem', width: '100%', padding: '1.2rem', background: 'white', color: 'var(--secondary)', border: 'none', fontWeight: 800 }}>
-            Request a Free Title Quote
+            Contact Us
           </Link>
         </div>
 

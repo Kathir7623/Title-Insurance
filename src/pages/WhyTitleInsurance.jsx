@@ -76,7 +76,7 @@ const WhyTitleInsurance = () => {
               </p>
               <div>
                 <Link to="/contact" className="btn btn-primary" style={{ marginBottom: '1rem' }}>Protect Your Home Now</Link>
-                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginLeft: '0.5rem' }}>Request a free title quote or ask us to review your upcoming closing in North Carolina or nationwide.</p>
+                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginLeft: '0.5rem' }}>Contact our team to review your upcoming closing in North Carolina or nationwide.</p>
               </div>
             </motion.div>
             <motion.div {...fadeIn}>
@@ -232,7 +232,7 @@ const WhyTitleInsurance = () => {
               Whether you are a homebuyer, investor, agent, or lender, contact KM Title today to discuss your next closing and ensure absolute protection.
             </p>
             <Link to="/contact" className="btn btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.2rem' }}>
-              Request a Free Title Quote
+              Protect Your Closing
             </Link>
           </motion.div>
         </div>

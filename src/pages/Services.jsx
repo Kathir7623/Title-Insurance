@@ -21,7 +21,7 @@ const Services = () => {
       icon: <Shield size={40} className="text-secondary" />,
       image: ownersImg,
       title: "Owner’s Title Insurance",
-      cta: "Get your owner’s title quote",
+      cta: "Protect your ownership",
       desc: "An Owner's Policy protects you, the property owner, from title defects that could arise after closing. For a one-time premium at closing, you receive long-term protection against covered title issues for as long as you own the property.",
       features: [
         "Protects against fraud and forgery", 
@@ -102,7 +102,7 @@ const Services = () => {
             transition={{ delay: 0.3 }}
             style={{ color: '#64748b', fontSize: '1rem', maxWidth: '800px', margin: '0 auto' }}
           >
-            Whether you are a home buyer, lender, investor, or developer, we offer tailored title solutions for your next closing. We provide title insurance services in Raleigh, North Carolina and support clients with real estate transactions nationwide. Our experienced team helps keep your closings smooth, compliant, and on schedule.
+            Whether you are a home buyer, lender, investor, or developer, we offer tailored title solutions for your next closing. We provide title insurance services throughout North Carolina and support clients with real estate transactions nationwide. Our experienced team helps keep your closings smooth, compliant, and on schedule.
           </motion.p>
         </div>
       </section>
@@ -210,7 +210,7 @@ const Services = () => {
           <motion.div {...fadeIn}>
             <h2 style={{ fontSize: '2.75rem', marginBottom: '1.5rem' }}>Still Have Questions?</h2>
             <p style={{ fontSize: '1.25rem', color: 'var(--muted)', marginBottom: '2.5rem', maxWidth: '850px', margin: '0 auto 2.5rem' }}>
-              Not sure which type of title coverage you need or managing multiple transactions? Our specialists can walk you through your options and provide a clear quote.
+              Not sure which type of title coverage you need or managing multiple transactions? Our specialists can walk you through your options and help you secure your property.
             </p>
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
               <a href="tel:+14707065858" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
