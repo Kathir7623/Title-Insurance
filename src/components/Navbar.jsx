@@ -50,33 +50,7 @@ const Navbar = () => {
         zIndex: 1000,
         transition: 'all 0.3s ease'
       }}>
-        {/* Top Bar */}
-        <div style={{ 
-          background: scrolled ? 'transparent' : '#0f172a', 
-          borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.1)', 
-          padding: scrolled ? '0' : '0.6rem 0', 
-          height: scrolled ? '0' : 'auto',
-          overflow: 'hidden',
-          transition: 'all 0.3s ease',
-          display: 'flex', 
-          justifyContent: 'center' 
-        }}>
-          <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem' }} className="top-bar-contacts">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <Phone size={14} className="text-secondary" />
-                  <a href="tel:4707065858" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>OFFICE: (470) 706-5858</a>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <Phone size={14} className="text-secondary" />
-                  <a href="tel:9842558817" style={{ color: '#e2e8f0', textDecoration: 'none', fontWeight: 600 }}>MOBILE: (984) 255-8817</a>
-                </div>
-              </div>
-            </div>
-            {/* Removed top bar contact link */}
-          </div>
-        </div>
+        {/* Top Bar Removed */}
 
         <nav className={`glass-nav ${scrolled ? 'scrolled' : ''}`} style={{ position: 'relative', border: 'none' }}>
           <div className="container nav-container" style={{ 
@@ -238,8 +212,6 @@ const Navbar = () => {
         }
         
         @media (max-width: 480px) {
-          .top-bar-contacts { flex-direction: column; gap: 0.5rem !important; align-items: flex-start !important; padding: 0.5rem 0; }
-          .top-bar-contacts div { font-size: 0.75rem; border-left: 2px solid var(--secondary); padding-left: 0.75rem; }
           .nav-container { height: 65px !important; }
           .nav-logo { height: 40px !important; }
         }
